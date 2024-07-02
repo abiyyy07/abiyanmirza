@@ -117,7 +117,7 @@ export default function Home() {
       <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-br from-purple-400 to-purple-800 opacity-50 z-0"></div>
       <div className="text-lg relative z-10">
         <p>
-        Hi, Im Abiyan Mirza. Im passionate about web development as well as other software development I'm learning and love creating seamless user experiences. With the experience and skills that I have and learned, I strive to provide high-quality solutions that meet user and business needs and other needs.
+        Hi, Im Abiyan Mirza. Im passionate about web development and soon will be mobile developer as well as other software development Im learning and love creating seamless user experiences. With the experience and skills that I have and learned, I strive to provide high-quality solutions that meet user and business needs and other needs.
         </p>
         <p className="mt-2">
         Outside of coding, I like doing my hobbies, the hobby I like the most is playing online games.
