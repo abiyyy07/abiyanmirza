@@ -70,9 +70,24 @@ export default function Home() {
           isOpen ? '-translate-x-0' : 'translate-x-full'
         }`}
       >
-        <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3 z-auto">
-          <Link href="#" className="block px-3 py-2 rounded-md text-base font-medium text-white hover:text-white hover:bg-gray-700">
-            Items 1
+        <div className="px-2 space-y-1 sm:px-3">
+          <Link href="/" className="hover:text-purple-500 transform duration-200 flex gap-1 mb-2 ml-2">
+            <FaHome className="mt-1" />Home
+          </Link>
+        </div>
+        <div className="px-2 space-y-1 sm:px-3">
+          <button className="hover:text-purple-500 transform duration-200 flex gap-1 mb-2 ml-2" onClick={() => scrollToRef(aboutMe)}>
+            <CgProfile className="mt-1" />About me
+          </button>
+        </div>
+        <div className="px-2 space-y-1 sm:px-3">
+          <button className="hover:text-purple-500 transform duration-200 flex gap-1 mb-2 ml-2" onClick={() => scrollToRef(myProject)}>
+            <CgWebsite className="mt-1" />Project
+          </button>
+        </div>
+        <div className="px-2 space-y-1 sm:px-3">
+          <Link href="https://wa.me/6289698672945" className="hover:text-purple-500 transform duration-200 flex gap-1 mb-2 ml-2">
+            <FaWhatsapp className="mt-1" />Contact Me
           </Link>
         </div>
       </div>
@@ -274,7 +289,17 @@ export default function Home() {
       </div>
     </div>
 
-    <footer className="bg-gradient-to-r from-purple-600 to-purple-800 text-white py-6">
+    <div className="bg-gradient-to-b from-gray-800 to-purple-800 flex flex-col items-center text-center justify-center h-48 text-white">
+      <h1 className="text-4xl md:text-6xl font-bold text-purple-500 mb-2">Want to create website?</h1>
+      <p className="mb-4 font-semibold text-purple-400">Create company profile, E-Commerce, Portofolio website, Blog and other? contact here</p>
+      <div className="text-2xl md:text-3xl mb-10">
+        <Link href="https://wa.me/6289698672945" className="bg-purple-500 text-white px-6 py-3 rounded-md text-lg font-medium hover:bg-purple-700 transition duration-300">
+          Contact me
+        </Link>
+      </div>
+    </div>
+
+    <footer className="bg-gradient-to-b from-purple-800 to-purple-600 text-white py-6">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex flex-col md:flex-row justify-between items-center">
           <div className="text-center md:text-left mb-4 md:mb-0">
