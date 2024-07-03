@@ -9,6 +9,7 @@ import { useRef } from "react";
 import { RiFirebaseFill, RiTailwindCssFill } from "react-icons/ri";
 import { SiTypescript } from "react-icons/si";
 import { CgProfile, CgWebsite } from "react-icons/cg";
+import Metadata from "@/components/layouts/home/metadata";
 import { IoIosArrowForward } from "react-icons/io";
 
 export default function Home() {
@@ -22,13 +23,10 @@ export default function Home() {
 
       <head>
         <title>Abiyan Mirza</title>
-        <link
-          rel="icon"
-          href="/favicon.jpeg"
-          type="image/favicon.jpeg"
-          sizes="20"
-        />
+        <link rel="icon" type="image/x-icon" href="/icon.png" />
       </head>
+
+      <Metadata />
 
     <nav className="fixed w-full bg-gray-800 text-white shadow-md shadow-purple-500 top-0 left-0 right-0 z-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
