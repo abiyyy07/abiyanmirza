@@ -22,7 +22,12 @@ export default function Home() {
 
       <head>
         <title>Abiyan Mirza</title>
-        <link rel="icon" type="image/x-icon" href="/abiyan.jpg" />
+        <link
+          rel="icon"
+          href="/favicon.jpeg"
+          type="image/favicon.jpeg"
+          sizes="20"
+        />
       </head>
 
     <nav className="fixed w-full bg-gray-800 text-white shadow-md shadow-purple-500 top-0 left-0 right-0 z-50">
