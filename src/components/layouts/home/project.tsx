@@ -10,61 +10,17 @@ export default function ProjectHome() {
                     <div className="bg-white shadow-md rounded-lg overflow-hidden">
                         <div className="relative pb-2/3">
                             <Image
-                            src="/projek/emporium.jpeg"
-                            alt="Emporium Petshop"
+                            src="/projek/bb.jpg"
+                            alt="Bahasa Bridge"
                             width={500}
                             height={500}
                             />
                         </div>
                         <div className="p-4">
-                            <h3 className="text-xl font-extrabold text-purple-800 mb-1">Emporium Petshop</h3>
-                            <p className="text-gray-600">Simple E-Commerce website with payment gateway and cost delivery calculate</p>
+                            <h3 className="text-xl font-extrabold text-purple-800 mb-1">Bahasa Bridge</h3>
+                            <p className="text-gray-600">Mobile apps for increase and learning English skills</p>
                             <Link
-                            href="https://emporium-petshop.vercel.app/" target="_blanc"
-                            className="mt-2 inline-block text-purple-600 font-semibold bg-tranparant border-2 border-purple-800 px-2 py-1 rounded-md hover:bg-purple-800 hover:text-white transform duration-200"
-                            >
-                            View Project
-                            </Link>
-                        </div>
-                    </div>
-
-                    {/* Project Two */}
-                    <div className="bg-white shadow-md rounded-lg overflow-hidden">
-                        <div className="relative pb-2/3">
-                            <Image
-                            src="/projek/agriculture.jpeg"
-                            alt="Smart Agriculture"
-                            width={500}
-                            height={500}
-                            />
-                        </div>
-                        <div className="p-4">
-                            <h3 className="text-xl font-extrabold text-purple-800 mb-1">Smart Agriculture</h3>
-                            <p className="text-gray-600">Simple informative static website for information about Smart Agriculture, small project IoT.</p>
-                            <Link
-                            href="https://smart-agriculture-nine.vercel.app/" target="_black"
-                            className="mt-2 inline-block text-purple-600 font-semibold bg-tranparant border-2 border-purple-800 px-2 py-1 rounded-md hover:bg-purple-800 hover:text-white transform duration-200"
-                            >
-                            View Project
-                            </Link>
-                        </div>
-                    </div>
-
-                    {/* Project Three */}
-                    <div className="bg-white shadow-md rounded-lg overflow-hidden">
-                        <div className="relative pb-2/3">
-                            <Image
-                            src="/projek/echo.jpeg"
-                            alt="Echo Pines Estate"
-                            width={500}
-                            height={500}
-                            />
-                        </div>
-                        <div className="p-4">
-                            <h3 className="text-xl font-extrabold text-purple-800 mb-1">Echo Pines Estate</h3>
-                            <p className="text-gray-600">Simple company profile for housing area business and modern static website</p>
-                            <Link
-                            href="https://echo-pines-estate.vercel.app/" target="_black"
+                            href="" target="_blanc"
                             className="mt-2 inline-block text-purple-600 font-semibold bg-tranparant border-2 border-purple-800 px-2 py-1 rounded-md hover:bg-purple-800 hover:text-white transform duration-200"
                             >
                             View Project

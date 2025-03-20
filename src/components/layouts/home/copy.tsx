@@ -11,6 +11,7 @@ import { SiTypescript } from "react-icons/si";
 import { CgProfile, CgWebsite } from "react-icons/cg";
 import { IoIosArrowForward } from "react-icons/io";
 import ProjectHome from "./project";
+import Skills from "./skills";
 
 export default function CopyHomeComponents() {
   const [isOpen, setIsOpen] = useState(false);
@@ -101,14 +102,14 @@ export default function CopyHomeComponents() {
         </h1>
         <h2 className="text-2xl md:text-4xl mb-8 gap-2">
           <ReactTyped
-            strings={['Full Stack Developer', 'Web Developer']}
+            strings={['Mobile App Developer', 'Flutter Developer']}
             typeSpeed={50}
             backSpeed={50}
             loop
           />
         </h2>
         <p className="mb-4 -mt-4">Innovating with technology</p>
-        <Link href="#" className="bg-purple-500 text-white px-6 py-3 rounded-md text-lg font-medium hover:bg-purple-700 transition duration-300">
+        <Link href="https://wa.me/6289698672945" className="bg-purple-500 text-white px-6 py-3 rounded-md text-lg font-medium hover:bg-purple-700 transition duration-300">
           Contact Me
         </Link>
       </div>
@@ -152,99 +153,15 @@ export default function CopyHomeComponents() {
       </div>
     </div>
 
-    <div className="bg-gray-800 text-white py-10 px-4">
-      <div className="text-3xl font-bold mb-6 text-purple-500 text-center">My Skills Programming</div>
-      <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4">
-        {/* HTML */}
-        <div className="bg-white shadow-md rounded-lg p-4 flex flex-col items-center justify-center text-center">
-          <div className="text-3xl text-purple-500 font-bold">
-            <FaHtml5 />
-          </div>
-          <div>
-            <h3 className="text-xl font-bold text-purple-600">HTML</h3>
-            <p className="text-gray-600">Markup Languange</p>
-          </div>
-        </div>
-        {/* CSS */}
-        <div className="bg-white shadow-md rounded-lg p-4 flex flex-col items-center justify-center text-center">
-          <div className="text-3xl text-purple-500 font-bold">
-            <FaCss3Alt  />
-          </div>
-          <div>
-            <h3 className="text-xl font-bold text-purple-600">CSS</h3>
-            <p className="text-gray-600">Styling Languange</p>
-          </div>
-        </div>
-        {/* React */}
-        <div className="bg-white shadow-md rounded-lg p-4 flex flex-col items-center justify-center text-center">
-          <div className="text-3xl text-purple-500 font-bold">
-            <FaReact />
-          </div>
-          <div>
-            <h3 className="text-xl font-bold text-purple-600">React</h3>
-            <p className="text-gray-600">Frontend Framework</p>
-          </div>
-        </div>
-        {/* Tailwind */}
-        <div className="bg-white shadow-md rounded-lg p-4 flex flex-col items-center justify-center text-center">
-          <div className="text-3xl text-purple-500 font-bold">
-            <RiTailwindCssFill />
-          </div>
-          <div>
-            <h3 className="text-xl font-bold text-purple-600">Tailwind</h3>
-            <p className="text-gray-600">Framework for CSS</p>
-          </div>
-        </div>
-        {/* Typescript */}
-        <div className="bg-white shadow-md rounded-lg p-4 flex flex-col items-center justify-center text-center">
-          <div className="text-3xl text-purple-500 font-bold">
-            <SiTypescript />
-          </div>
-          <div>
-            <h3 className="text-xl font-bold text-purple-600">Typescript</h3>
-            <p className="text-gray-600">Programming Language</p>
-          </div>
-        </div>
-        {/* Node JS */}
-        <div className="bg-white shadow-md rounded-lg p-4 flex flex-col items-center justify-center text-center">
-          <div className="text-3xl text-purple-500 font-bold">
-            <FaNodeJs />
-          </div>
-          <div>
-            <h3 className="text-xl font-bold text-purple-600">Node JS</h3>
-            <p className="text-gray-600">Backend Framework</p>
-          </div>
-        </div>
-        {/* Firebase */}
-        <div className="bg-white shadow-md rounded-lg p-4 flex flex-col items-center justify-center text-center">
-          <div className="text-3xl text-purple-500 font-bold">
-            <RiFirebaseFill />
-          </div>
-          <div>
-            <h3 className="text-xl font-bold text-purple-600">Firebase</h3>
-            <p className="text-gray-600">Backend-as-a-Service</p>
-          </div>
-        </div>
-        {/* Git */}
-        <div className="bg-white shadow-md rounded-lg p-4 flex flex-col items-center justify-center text-center">
-          <div className="text-3xl text-purple-500 font-bold">
-            <FaGitAlt />
-          </div>
-          <div>
-            <h3 className="text-xl font-bold text-purple-600">Git</h3>
-            <p className="text-gray-600">Version Control System</p>
-          </div>
-        </div>
-      </div>
-    </div>
+    <Skills />
 
     <div className="bg-gray-800 text-white py-10 px-4" ref={myProject}>
       <ProjectHome />
     </div>
 
     <div className="bg-gradient-to-b from-gray-800 to-purple-800 flex flex-col items-center text-center justify-center h-48 text-white">
-      <h1 className="text-4xl md:text-6xl font-bold text-purple-500 mb-2">Want to create website?</h1>
-      <p className="mb-4 font-semibold text-purple-400">Create company profile, E-Commerce, Portofolio website, Blog and other? contact here</p>
+      <h1 className="text-4xl md:text-6xl font-bold text-purple-500 mb-2">Want to create mobile app?</h1>
+      <p className="mb-4 font-semibold text-purple-400">Create your own application with your creative ideas</p>
       <div className="text-2xl md:text-3xl mb-10">
         <Link href="https://wa.me/6289698672945" className="bg-purple-500 text-white px-6 py-3 rounded-md text-lg font-medium hover:bg-purple-700 transition duration-300">
           Contact me
