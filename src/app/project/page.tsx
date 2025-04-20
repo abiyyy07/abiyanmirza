@@ -76,7 +76,7 @@ export default function Project() {
                         <div className="p-4">
                             <h3 className="text-xl font-extrabold text-purple-800 mb-1">GeoFarezly</h3>
                             <p className="text-gray-600">
-                                Location sharing app that allows you and your friends to see each other's positions on a map. But you can hide to privacy.
+                                Location sharing app that allows you and your friends to see each others positions on a map. But you can hide to privacy.
                             </p>
                             <Link
                                 href="https://drive.google.com/drive/folders/1FcLYCvseIDw2djrOyRTj48dtF22O3u_M?usp=drive_link"
