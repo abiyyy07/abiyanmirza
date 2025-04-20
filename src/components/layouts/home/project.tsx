@@ -18,12 +18,12 @@ export default function ProjectHome() {
                         </div>
                         <div className="p-4">
                             <h3 className="text-xl font-extrabold text-purple-800 mb-1">Bahasa Bridge</h3>
-                            <p className="text-gray-600">Mobile apps for increase and learning English skills</p>
+                            <p className="text-gray-600">Mobile apps platform for easy learning english with quiz method. Available 5 type of quiz you can answer and increase your english skill.</p>
                             <Link
                             href="https://drive.google.com/drive/folders/1FO1fm-M3j6wJAOPTr6SrNSufJmLyIe2T?usp=drive_link" target="_blanc"
                             className="mt-2 inline-block text-purple-600 font-semibold bg-tranparant border-2 border-purple-800 px-2 py-1 rounded-md hover:bg-purple-800 hover:text-white transform duration-200"
                             >
-                            View Project
+                            View and Try App
                             </Link>
                         </div>
                     </div>
@@ -39,12 +39,33 @@ export default function ProjectHome() {
                         </div>
                         <div className="p-4">
                             <h3 className="text-xl font-extrabold text-purple-800 mb-1">Afa Rush</h3>
-                            <p className="text-gray-600">Mobile apps for typing competition and solo typing</p>
+                            <p className="text-gray-600">Mobile apps for typing competition to more faster typing. Have to mode, solo and versus (matching match) and have rank system.</p>
                             <Link
                             href="https://drive.google.com/drive/folders/1OiHnBpRHBTK7T2bnPCAJLdVZtBd5B1k-?usp=drive_link" target="_blanc"
                             className="mt-2 inline-block text-purple-600 font-semibold bg-tranparant border-2 border-purple-800 px-2 py-1 rounded-md hover:bg-purple-800 hover:text-white transform duration-200"
                             >
-                            View Project
+                            View and Try App
+                            </Link>
+                        </div>
+                    </div>
+                    {/* Project three */}
+                    <div className="bg-white shadow-md rounded-lg overflow-hidden">
+                        <div className="relative pb-2/3">
+                            <Image
+                            src="/projek/geofarezly.jpg"
+                            alt="Bahasa Bridge"
+                            width={500}
+                            height={500}
+                            />
+                        </div>
+                        <div className="p-4">
+                            <h3 className="text-xl font-extrabold text-purple-800 mb-1">GeoFarezly</h3>
+                            <p className="text-gray-600">Mobile application to display your position and location on map. You can invite your friend to sharing location each other</p>
+                            <Link
+                            href="https://drive.google.com/drive/folders/1FcLYCvseIDw2djrOyRTj48dtF22O3u_M?usp=drive_link" target="_blanc"
+                            className="mt-2 inline-block text-purple-600 font-semibold bg-tranparant border-2 border-purple-800 px-2 py-1 rounded-md hover:bg-purple-800 hover:text-white transform duration-200"
+                            >
+                            View and Try App
                             </Link>
                         </div>
                     </div>

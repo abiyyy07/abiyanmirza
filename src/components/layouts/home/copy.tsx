@@ -46,7 +46,7 @@ export default function CopyHomeComponents() {
             <button className="hover:text-purple-500 transform duration-200 flex gap-1" onClick={() => scrollToRef(myProject)}>
               <CgWebsite className="mt-1" />Project
             </button>
-            <Link href="https://wa.me/6289698672945" className="text-white bg-transparent px-2 py-1 border-2 border-white hover:bg-purple-600 hover:border-purple-600 duration-200 transform">
+            <Link href="https://www.instagram.com/abiyanm_/?igsh=aHJ0cWdqcmZqY2l2" target="_blank" className="text-white bg-transparent px-2 py-1 border-2 border-white hover:bg-purple-600 hover:border-purple-600 duration-200 transform">
               Contact Me
             </Link>
           </div>
@@ -88,8 +88,8 @@ export default function CopyHomeComponents() {
           </button>
         </div>
         <div className="px-2 space-y-1 sm:px-3">
-          <Link href="https://wa.me/6289698672945" className="hover:text-purple-500 transform duration-200 flex gap-1 mb-2 ml-2">
-            <FaWhatsapp className="mt-1" />Contact Me
+          <Link href="https://www.instagram.com/abiyanm_/?igsh=aHJ0cWdqcmZqY2l2" target="_blank" className="hover:text-purple-500 transform duration-200 flex gap-1 mb-2 ml-2">
+            <FaInstagram className="mt-1" />Contact Me
           </Link>
         </div>
       </div>
@@ -109,7 +109,7 @@ export default function CopyHomeComponents() {
           />
         </h2>
         <p className="mb-4 -mt-4">Innovating with technology</p>
-        <Link href="https://wa.me/6289698672945" className="bg-purple-500 text-white px-6 py-3 rounded-md text-lg font-medium hover:bg-purple-700 transition duration-300">
+        <Link href="https://www.instagram.com/abiyanm_/?igsh=aHJ0cWdqcmZqY2l2" target="_blank" className="bg-purple-500 text-white px-6 py-3 rounded-md text-lg font-medium hover:bg-purple-700 transition duration-300">
           Contact Me
         </Link>
       </div>
@@ -134,7 +134,7 @@ export default function CopyHomeComponents() {
       <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-br from-purple-400 to-purple-800 opacity-50 z-0"></div>
       <div className="text-lg relative z-10">
         <p>
-        Hi, Im Abiyan Mirza. Im passionate about web development and soon will be mobile developer as well as other software development Im learning and love creating seamless user experiences. With the experience and skills that I have and learned, I strive to provide high-quality solutions that meet user and business needs and other needs.
+        Hi, I’m Abiyan Mirza — a passionate aspiring mobile developer who is deeply interested in crafting seamless and user-friendly digital experiences. I’m currently expanding my skills in mobile and software development, and I enjoy building applications that not only look great but also solve real user and business problems. With the knowledge and experience I’ve gained, I strive to deliver high-quality, impactful solutions that meet diverse needs.
         </p>
         <p className="mt-2">
         Outside of coding, I like doing my hobbies, the hobby I like the most is playing online games.
@@ -146,8 +146,8 @@ export default function CopyHomeComponents() {
           <Link href={'https://github.com/abiyyy07/'} target="_black" className="transform duration-200 hover:text-gray-300">
             <FaGithub size={30} />
           </Link>
-          <Link href={'https://wa.me/6289698672945'} target="_black" className="transform duration-200 hover:text-green-600">
-            <FaWhatsapp size={30} />
+          <Link href={'https://www.linkedin.com/in/abiyan-mirza-a468552b3?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app'} target="_black" className="transform duration-200 hover:text-blue-600">
+            <FaLinkedin size={30} />
           </Link>
         </div>
       </div>
@@ -163,7 +163,7 @@ export default function CopyHomeComponents() {
       <h1 className="text-4xl md:text-6xl font-bold text-purple-500 mb-2">Want to create mobile app?</h1>
       <p className="mb-4 font-semibold text-purple-400">Create your own application with your creative ideas</p>
       <div className="text-2xl md:text-3xl mb-10">
-        <Link href="https://wa.me/6289698672945" className="bg-purple-500 text-white px-6 py-3 rounded-md text-lg font-medium hover:bg-purple-700 transition duration-300">
+        <Link href="https://www.instagram.com/abiyanm_/?igsh=aHJ0cWdqcmZqY2l2" target="_blank" className="bg-purple-500 text-white px-6 py-3 rounded-md text-lg font-medium hover:bg-purple-700 transition duration-300">
           Contact me
         </Link>
       </div>
@@ -184,9 +184,6 @@ export default function CopyHomeComponents() {
             </a>
             <a href="https://www.linkedin.com/in/abiyan-mirza-a468552b3?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-white transition duration-300">
               <FaLinkedin size={24} />
-            </a>
-            <a href="https://wa.me/6289698672945" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-white transition duration-300">
-              <FaWhatsapp size={24} />
             </a>
           </div>
         </div>
