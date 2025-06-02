@@ -27,11 +27,17 @@ export default function Project() {
                                 Mobile app platform for learning English using a fun quiz-based method. There are 5 types of quizzes to boost your English skills.
                             </p>
                             <Link
+                                href="/project/bahasa-bridge"
+                                className="mt-2 mr-2 inline-block text-purple-600 font-semibold bg-transparent border-2 border-purple-800 px-3 py-1 rounded-md hover:bg-purple-800 hover:text-white transition duration-200"
+                            >
+                                Detail App
+                            </Link>
+                            <Link
                                 href="https://drive.google.com/drive/folders/1FO1fm-M3j6wJAOPTr6SrNSufJmLyIe2T?usp=drive_link"
                                 target="_blank"
                                 className="mt-2 inline-block text-purple-600 font-semibold bg-transparent border-2 border-purple-800 px-3 py-1 rounded-md hover:bg-purple-800 hover:text-white transition duration-200"
                             >
-                                View and Try App
+                                Try App
                             </Link>
                         </div>
                     </div>
@@ -53,11 +59,16 @@ export default function Project() {
                                 Typing competition app to improve typing speed. Includes solo mode, versus match, and a ranking system.
                             </p>
                             <Link
-                                href="https://drive.google.com/drive/folders/1OiHnBpRHBTK7T2bnPCAJLdVZtBd5B1k-?usp=drive_link"
-                                target="_blank"
-                                className="mt-2 inline-block text-purple-600 font-semibold bg-transparent border-2 border-purple-800 px-3 py-1 rounded-md hover:bg-purple-800 hover:text-white transition duration-200"
-                            >
-                                View and Try App
+                                href="/project/afarush"
+                                className="mt-2 mr-2 inline-block text-purple-600 font-semibold bg-tranparant border-2 border-purple-800 px-2 py-1 rounded-md hover:bg-purple-800 hover:text-white transform duration-200"
+                                >
+                                Detail App
+                            </Link>
+                            <Link
+                                href="https://drive.google.com/drive/folders/1OiHnBpRHBTK7T2bnPCAJLdVZtBd5B1k-?usp=drive_link" target="_blanc"
+                                className="mt-2 inline-block text-purple-600 font-semibold bg-tranparant border-2 border-purple-800 px-2 py-1 rounded-md hover:bg-purple-800 hover:text-white transform duration-200"
+                                >
+                                Try App
                             </Link>
                         </div>
                     </div>
@@ -79,11 +90,17 @@ export default function Project() {
                                 Location sharing app that allows you and your friends to see each others positions on a map. But you can hide to privacy.
                             </p>
                             <Link
+                                href="/project/geofarezly"
+                                className="mt-2 mr-2 inline-block text-purple-600 font-semibold bg-transparent border-2 border-purple-800 px-3 py-1 rounded-md hover:bg-purple-800 hover:text-white transition duration-200"
+                            >
+                                Detail App
+                            </Link>
+                            <Link
                                 href="https://drive.google.com/drive/folders/1FcLYCvseIDw2djrOyRTj48dtF22O3u_M?usp=drive_link"
                                 target="_blank"
                                 className="mt-2 inline-block text-purple-600 font-semibold bg-transparent border-2 border-purple-800 px-3 py-1 rounded-md hover:bg-purple-800 hover:text-white transition duration-200"
                             >
-                                View and Try App
+                                Try App
                             </Link>
                         </div>
                     </div>
