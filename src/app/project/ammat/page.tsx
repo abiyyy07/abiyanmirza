@@ -2,34 +2,32 @@
 
 import { useState } from "react";
 
-export default function Afarush() {
+export default function Ammat() {
   const [selectedImage, setSelectedImage] = useState<string | null>(null);
 
   const screenshots = [
-    "/projek/afarush/ar-ss6.jpg",
-    "/projek/afarush/ar-ss4.jpg",
-    "/projek/afarush/ar-ss7.jpg",
-    "/projek/afarush/ar-ss3.jpg",
-    "/projek/afarush/ar-ss1.jpg",
-    "/projek/afarush/ar-ss2.jpg",
-    "/projek/afarush/ar-ss8.jpg",
-    "/projek/afarush/ar-ss11.jpg",
-    "/projek/afarush/ar-ss12.jpg",
-    "/projek/afarush/ar-ss13.jpg",
-    "/projek/afarush/ar-ss14.jpg",
-    "/projek/afarush/ar-ss10.jpg",
+    "/projek/ammat/am-ss10.jpg",
+    "/projek/ammat/am-ss9.jpg",
+    "/projek/ammat/am-ss6.jpg",
+    "/projek/ammat/am-ss3.jpg",
+    "/projek/ammat/am-ss1.jpg",
+    "/projek/ammat/am-ss2.jpg",
+    "/projek/ammat/am-ss4.jpg",
+    "/projek/ammat/am-ss5.jpg",
+    "/projek/ammat/am-ss7.jpg",
+    "/projek/ammat/am-ss8.jpg",
   ];
 
   return (
     <>
       <head>
-        <title>Project | Afarush</title>
+        <title>Project | AMMAT</title>
       </head>
 
       <div className="bg-gray-800 min-h-screen p-6">
         {/* Judul */}
         <h1 className="text-3xl font-bold text-purple-500 mb-6 text-center">
-          Afarush – Typing competition app
+          AMMAT – Mosque management mobile app
         </h1>
 
         {/* Screenshot scrollable */}
@@ -62,8 +60,8 @@ export default function Afarush() {
         {/* Deskripsi */}
         <div className="mb-8 px-2">
             <h2 className="text-2xl font-black mb-2 text-center text-white">Description</h2>
-            <p className="text-white md:px-12 text-center">
-                Afarush is a mobile application for fast typing competitions via mobile phones. Usually familiar on the website and run for desktop, but this is different and is on mobile. Afarush provides 2 modes of competition, namely multiplayer and solo, and each is distinguished by the calculation of points and ranks. Multiplayer is found by 2 people who type quickly and will be given points to the winner and vice versa. Leaderboard is also presented, divided into 2 modes so that each mode has its own top score. This application is for entertainment and tests how fast you are in typing on your mobile phone.
+            <p className="text-white md:px-12 text-center">     
+                AMMAT stands for At-Tauhid Mosque Management Application in Indonesian. It contains various features that are distinguished by their roles. Starting from the mosque youth, then there are the ranks of takmir. Then for the mosque youth, it is divided again into separate divisions and there are 5 different divisions that can be taken from each member. In addition, management for daily and also making website news is here. The purpose of making this application is to facilitate management for the future at-tauhid mosque.
             </p>
         </div>
 

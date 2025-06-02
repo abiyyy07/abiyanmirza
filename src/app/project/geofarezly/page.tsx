@@ -58,8 +58,8 @@ export default function Geofarezly() {
 
         {/* Deskripsi */}
         <div className="mb-8 px-2">
-            <h2 className="text-2xl font-black mb-2 text-center text-white">Deskripsi</h2>
-            <p className="text-white px-12 text-center">
+            <h2 className="text-2xl font-black mb-2 text-center text-white">Description</h2>
+            <p className="text-white md:px-12 text-center">
                 GeoFarezly is a mobile application for sharing locations with friends in real time. GeoFarezly provides the accuracy of the displayed location. For privacy, you can also hide your location from your friends so that they are not seen. In addition, if you are bored with the standard map theme, you can change it yourself in the settings. The friendship feature is the main key to supporting elements in the application, because for sharing. You can search by UniqueID then ask for friendship until accepted and officially become friends and can see each other's locations.
             </p>
         </div>
@@ -67,7 +67,7 @@ export default function Geofarezly() {
         {/* Tech */}
         <div className="mb-8 px-2">
             <h2 className="text-2xl font-black mb-2 text-center text-white">Tech</h2>
-            <p className="text-white px-12 text-center">
+            <p className="text-white md:px-12 text-center">
                 Flutter, Dart, Firebase, Getx.
             </p>
         </div>

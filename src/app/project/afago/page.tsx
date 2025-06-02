@@ -2,34 +2,32 @@
 
 import { useState } from "react";
 
-export default function Afarush() {
+export default function Afago() {
   const [selectedImage, setSelectedImage] = useState<string | null>(null);
 
   const screenshots = [
-    "/projek/afarush/ar-ss6.jpg",
-    "/projek/afarush/ar-ss4.jpg",
-    "/projek/afarush/ar-ss7.jpg",
-    "/projek/afarush/ar-ss3.jpg",
-    "/projek/afarush/ar-ss1.jpg",
-    "/projek/afarush/ar-ss2.jpg",
-    "/projek/afarush/ar-ss8.jpg",
-    "/projek/afarush/ar-ss11.jpg",
-    "/projek/afarush/ar-ss12.jpg",
-    "/projek/afarush/ar-ss13.jpg",
-    "/projek/afarush/ar-ss14.jpg",
-    "/projek/afarush/ar-ss10.jpg",
+    "/projek/afago/ag-ss1.jpg",
+    "/projek/afago/ag-ss3.jpg",
+    "/projek/afago/ag-ss2.jpg",
+    "/projek/afago/ag-ss6.jpg",
+    "/projek/afago/ag-ss8.jpg",
+    "/projek/afago/ag-ss9.jpg",
+    "/projek/afago/ag-ss5.jpg",
+    "/projek/afago/ag-ss10.jpg",
+    "/projek/afago/ag-ss7.jpg",
+    "/projek/afago/ag-ss4.jpg",
   ];
 
   return (
     <>
       <head>
-        <title>Project | Afarush</title>
+        <title>Project | Afago</title>
       </head>
 
       <div className="bg-gray-800 min-h-screen p-6">
         {/* Judul */}
         <h1 className="text-3xl font-bold text-purple-500 mb-6 text-center">
-          Afarush – Typing competition app
+          Afago – Rent vehicle application
         </h1>
 
         {/* Screenshot scrollable */}
@@ -63,7 +61,8 @@ export default function Afarush() {
         <div className="mb-8 px-2">
             <h2 className="text-2xl font-black mb-2 text-center text-white">Description</h2>
             <p className="text-white md:px-12 text-center">
-                Afarush is a mobile application for fast typing competitions via mobile phones. Usually familiar on the website and run for desktop, but this is different and is on mobile. Afarush provides 2 modes of competition, namely multiplayer and solo, and each is distinguished by the calculation of points and ranks. Multiplayer is found by 2 people who type quickly and will be given points to the winner and vice versa. Leaderboard is also presented, divided into 2 modes so that each mode has its own top score. This application is for entertainment and tests how fast you are in typing on your mobile phone.
+                
+Afago is a mobile application for renting cars and motorbikes that uses down payment with a payment gateway by midtrans. Many types of vehicle brands are being rented and each brand has its own type. So the system is to book the date the vehicle will be rented and how many days the vehicle is rented. Easy settings to set orders for sellers and customers.
             </p>
         </div>
 

@@ -8,9 +8,72 @@ export default function Project() {
                 <title>Abiyan - Project</title>
             </head>
             <div className="flex flex-col items-center justify-center min-h-screen bg-gray-800 text-white px-4 md:px-10">
-                <div className="text-3xl font-bold mb-6 text-white">All My Projects</div>
-                <div className="w-full max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                    {/* Project One */}
+                <div className="text-3xl font-bold mb-6 text-white mt-8">All My Projects</div>
+                <div className="w-full max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-8">
+                    {/* ====================================================== */}
+                    <div className="bg-white shadow-md rounded-lg overflow-hidden">
+                        <div className="relative">
+                            <Image
+                                src="/projek/ammat.jpg"
+                                alt="Bahasa Bridge"
+                                width={500}
+                                height={500}
+                                className="w-full"
+                            />
+                        </div>
+                        <div className="p-4">
+                            <h3 className="text-xl font-extrabold text-purple-800 mb-1">AMMAT</h3>
+                            <p className="text-gray-600">
+                                Mobile app who functionally for easy rent vehicle with payment gateway (midtrans). Available two type of vehicle and easy manage order.
+                            </p>
+                            <Link
+                                href="/project/ammat"
+                                className="mt-2 mr-2 inline-block text-purple-600 font-semibold bg-transparent border-2 border-purple-800 px-3 py-1 rounded-md hover:bg-purple-800 hover:text-white transition duration-200"
+                            >
+                                Detail App
+                            </Link>
+                            <Link
+                                href=""
+                                className="mt-2 inline-block text-purple-600 font-semibold bg-transparent border-2 border-purple-800 px-3 py-1 rounded-md hover:bg-purple-800 hover:text-white transition duration-200"
+                            >
+                                Private App
+                            </Link>
+                        </div>
+                    </div>
+
+                    {/* ====================================================== */}
+                    <div className="bg-white shadow-md rounded-lg overflow-hidden">
+                        <div className="relative">
+                            <Image
+                                src="/projek/afago.jpg"
+                                alt="Bahasa Bridge"
+                                width={500}
+                                height={500}
+                                className="w-full"
+                            />
+                        </div>
+                        <div className="p-4">
+                            <h3 className="text-xl font-extrabold text-purple-800 mb-1">Afago</h3>
+                            <p className="text-gray-600">
+                                Mobile app who functionally for easy rent vehicle with payment gateway (midtrans). Available two type of vehicle and easy manage order.
+                            </p>
+                            <Link
+                                href="/project/afago"
+                                className="mt-2 mr-2 inline-block text-purple-600 font-semibold bg-transparent border-2 border-purple-800 px-3 py-1 rounded-md hover:bg-purple-800 hover:text-white transition duration-200"
+                            >
+                                Detail App
+                            </Link>
+                            <Link
+                                href="https://drive.google.com/drive/folders/16PHZAcxSLc2cXdYQY6V1UJ-u_AsjiUHY?usp=drive_link"
+                                target="_blank"
+                                className="mt-2 inline-block text-purple-600 font-semibold bg-transparent border-2 border-purple-800 px-3 py-1 rounded-md hover:bg-purple-800 hover:text-white transition duration-200"
+                            >
+                                Try App
+                            </Link>
+                        </div>
+                    </div>
+
+                    {/* ====================================================== */}
                     <div className="bg-white shadow-md rounded-lg overflow-hidden">
                         <div className="relative">
                             <Image

@@ -75,8 +75,8 @@ export default function BahasaBridge() {
 
         {/* Deskripsi */}
         <div className="mb-8 px-2">
-            <h2 className="text-2xl font-black mb-2 text-center text-white">Deskripsi</h2>
-            <p className="text-white px-12 text-center">
+            <h2 className="text-2xl font-black mb-2 text-center text-white">Description</h2>
+            <p className="text-white md:px-12 text-center">
                 Bahasa Bridge is a mobile application platform for learning English for Indonesian. There are various quiz methods provided to support learning and provide results and final points for assessment. Various types of quizzes, such as multiple choices in Grammar, Vocabulary, Reading Comprehension, and Idioms Phrases. We also provide puzzles for children to get closer to learning. Then there is also a manual typing type that arranges words. Leaderboards are also provided and displayed as learning motivation to continue to develop in the future.
             </p>
         </div>
@@ -84,7 +84,7 @@ export default function BahasaBridge() {
         {/* Tech */}
         <div className="mb-8 px-2">
             <h2 className="text-2xl font-black mb-2 text-center text-white">Tech</h2>
-            <p className="text-white px-12 text-center">
+            <p className="text-white md:px-12 text-center">
                 Flutter, Dart, Firebase, Getx.
             </p>
         </div>
