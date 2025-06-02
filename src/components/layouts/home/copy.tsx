@@ -134,7 +134,7 @@ export default function CopyHomeComponents() {
       <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-br from-purple-400 to-purple-800 opacity-50 z-0"></div>
       <div className="text-lg relative z-10">
         <p>
-        Hi, Im Abiyan Mirza — a passionate aspiring mobile developer who is deeply interested in crafting seamless and user-friendly digital experiences. I’m currently expanding my skills in mobile and software development, and I enjoy building applications that not only look great but also solve real user and business problems. With the knowledge and experience I’ve gained, I strive to deliver high-quality, impactful solutions that meet diverse needs.
+        Hi, Im Abiyan Mirza — a passionate aspiring mobile developer who is deeply interested in crafting seamless and user-friendly digital experiences. Im currently expanding my skills in mobile and software development, and I enjoy building applications that not only look great but also solve real user and business problems. With the knowledge and experience Ive gained, I strive to deliver high-quality, impactful solutions that meet diverse needs.
         </p>
         <p className="mt-2">
         Outside of coding, I like doing my hobbies, the hobby I like the most is playing online games.
