@@ -74,10 +74,16 @@ export default function ProjectHome() {
                             <h3 className="text-xl font-extrabold text-purple-800 mb-1">GeoFarezly</h3>
                             <p className="text-gray-600">Mobile application to display your position and location on map. You can invite your friend to sharing location each other</p>
                             <Link
-                            href="https://drive.google.com/drive/folders/1FcLYCvseIDw2djrOyRTj48dtF22O3u_M?usp=drive_link" target="_blanc"
-                            className="mt-2 inline-block text-purple-600 font-semibold bg-tranparant border-2 border-purple-800 px-2 py-1 rounded-md hover:bg-purple-800 hover:text-white transform duration-200"
-                            >
-                            View and Try App
+                                href="/project/geofarezly"
+                                className="mt-2 inline-block text-purple-600 font-semibold bg-tranparant border-2 border-purple-800 px-2 py-1 rounded-md hover:bg-purple-800 hover:text-white transform duration-200"
+                                >
+                                Detail App
+                            </Link>
+                            <Link
+                                href="https://drive.google.com/drive/folders/1FcLYCvseIDw2djrOyRTj48dtF22O3u_M?usp=drive_link" target="_blanc"
+                                className="mt-2 inline-block text-purple-600 font-semibold bg-tranparant border-2 border-purple-800 px-2 py-1 rounded-md hover:bg-purple-800 hover:text-white transform duration-200"
+                                >
+                                Try App
                             </Link>
                         </div>
                     </div>
