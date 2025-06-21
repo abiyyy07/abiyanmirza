@@ -13,11 +13,11 @@ const skills = [
 
 export default function Skills() {
   return (
-    <div className="bg-gray-800 text-white py-10 px-4">
+    <div className="bg-gray-800 text-white py-8 px-4">
       <h2 className="text-3xl font-bold mb-6 text-purple-500 text-center">
         My Programming Skills
       </h2>
-      <div className="flex flex-wrap justify-center gap-6">
+      <div className="flex flex-wrap justify-center gap-4">
         {skills.map((skill, index) => (
           <div
             key={index}

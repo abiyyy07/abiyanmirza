@@ -75,7 +75,7 @@ export default function ProjectHome() {
                             <p className="text-gray-600">Mobile application to display your position and location on map. You can invite your friend to sharing location each other</p>
                             <Link
                                 href="/project/geofarezly"
-                                className="mt-2 inline-block text-purple-600 font-semibold bg-tranparant border-2 border-purple-800 px-2 py-1 rounded-md hover:bg-purple-800 hover:text-white transform duration-200"
+                                className="mt-2 inline-block mr-2 text-purple-600 font-semibold bg-tranparant border-2 border-purple-800 px-2 py-1 rounded-md hover:bg-purple-800 hover:text-white transform duration-200"
                                 >
                                 Detail App
                             </Link>
