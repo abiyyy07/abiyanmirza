@@ -15,7 +15,7 @@ export default function Project() {
                         <div className="relative">
                             <Image
                                 src="/projek/ammat.jpg"
-                                alt="Bahasa Bridge"
+                                alt="AMMAT"
                                 width={500}
                                 height={500}
                                 className="w-full"
@@ -24,7 +24,7 @@ export default function Project() {
                         <div className="p-4">
                             <h3 className="text-xl font-extrabold text-purple-800 mb-1">AMMAT</h3>
                             <p className="text-gray-600">
-                                Mobile app who functionally for easy rent vehicle with payment gateway (midtrans). Available two type of vehicle and easy manage order.
+                                Mobile app who functionally manage mosque system like member, event, or any data who needed for digital.
                             </p>
                             <Link
                                 href="/project/ammat"
