@@ -33,7 +33,7 @@ export default function Afarush() {
         </h1>
 
         {/* Tags */}
-        <div className="flex items-center justify-center gap-2 mb-6">
+        <div className="flex flex-wrap items-center justify-center gap-2 mb-6">
           <div className="text-white border-2 border-white pr-2 pl-2 rounded-lg text-lg font-semibold">Mobile App</div>
           <div className="text-white border-2 border-white pr-2 pl-2 rounded-lg text-lg font-semibold">Flutter</div>
           <div className="text-white border-2 border-white pr-2 pl-2 rounded-lg text-lg font-semibold">Typing App</div>
