@@ -26,9 +26,16 @@ export default function Afago() {
 
       <div className="bg-gray-800 min-h-screen p-6">
         {/* Judul */}
-        <h1 className="text-3xl font-bold text-purple-500 mb-6 text-center">
+        <h1 className="text-3xl font-bold text-purple-500 mb-4 text-center">
           Afago – Rent vehicle application
         </h1>
+
+        {/* Tags */}
+        <div className="flex items-center justify-center gap-2 mb-6">
+          <div className="text-white border-2 border-white pr-2 pl-2 rounded-lg text-lg font-semibold">Mobile App</div>
+          <div className="text-white border-2 border-white pr-2 pl-2 rounded-lg text-lg font-semibold">Flutter</div>
+          <div className="text-white border-2 border-white pr-2 pl-2 rounded-lg text-lg font-semibold">Rent App</div>
+        </div>
 
         {/* Screenshot scrollable */}
         <div className="flex overflow-x-auto space-x-4 mb-6 px-16 hide-scrollbar">
@@ -60,9 +67,8 @@ export default function Afago() {
         {/* Deskripsi */}
         <div className="mb-8 px-2">
             <h2 className="text-2xl font-black mb-2 text-center text-white">Description</h2>
-            <p className="text-white md:px-12 text-center">
-                
-Afago is a mobile application for renting cars and motorbikes that uses down payment with a payment gateway by midtrans. Many types of vehicle brands are being rented and each brand has its own type. So the system is to book the date the vehicle will be rented and how many days the vehicle is rented. Easy settings to set orders for sellers and customers.
+            <p className="text-white md:px-12 text-center">  
+              Afago is a mobile application for renting cars and motorbikes that uses down payment with a payment gateway by midtrans. Many types of vehicle brands are being rented and each brand has its own type. So the system is to book the date the vehicle will be rented and how many days the vehicle is rented. Easy settings to set orders for sellers and customers.
             </p>
         </div>
 

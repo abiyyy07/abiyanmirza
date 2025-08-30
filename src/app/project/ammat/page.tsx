@@ -26,9 +26,16 @@ export default function Ammat() {
 
       <div className="bg-gray-800 min-h-screen p-6">
         {/* Judul */}
-        <h1 className="text-3xl font-bold text-purple-500 mb-6 text-center">
+        <h1 className="text-3xl font-bold text-purple-500 mb-4 text-center">
           AMMAT – Mosque management mobile app
         </h1>
+
+        {/* Tags */}
+        <div className="flex items-center justify-center gap-2 mb-6">
+          <div className="text-white border-2 border-white pr-2 pl-2 rounded-lg text-lg font-semibold">Mobile App</div>
+          <div className="text-white border-2 border-white pr-2 pl-2 rounded-lg text-lg font-semibold">Flutter</div>
+          <div className="text-white border-2 border-white pr-2 pl-2 rounded-lg text-lg font-semibold">Mosque/Social App</div>
+        </div>
 
         {/* Screenshot scrollable */}
         <div className="flex overflow-x-auto space-x-4 mb-6 px-16 hide-scrollbar">

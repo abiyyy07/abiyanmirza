@@ -4,7 +4,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { FaCss3Alt, FaGitAlt, FaGithub, FaHome, FaHtml5, FaInstagram, FaLinkedin, FaNodeJs, FaReact, FaTwitter, FaWhatsapp } from "react-icons/fa";
 import { useState } from "react";
-import Typed, { ReactTyped } from 'react-typed';
+import { ReactTyped } from 'react-typed';
 import { useRef } from "react";
 import { RiFirebaseFill, RiTailwindCssFill } from "react-icons/ri";
 import { SiTypescript } from "react-icons/si";
