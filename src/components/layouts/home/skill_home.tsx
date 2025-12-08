@@ -107,7 +107,7 @@ export default function ComponentsSkillHome({
         <h2 className="text-3xl md:text-4xl font-bold text-center mb-12 text-white">Skills</h2>
 
         {/* FILTER BUTTONS */}
-        <div className="flex justify-center gap-4 mb-12">
+        <div className="flex justify-center gap-4 mb-12 px-10">
           {([
             { key: "web", label: "Web Developer" },
             { key: "mobile", label: "Mobile Developer" },

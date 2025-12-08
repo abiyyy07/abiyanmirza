@@ -35,20 +35,11 @@ export default function ComponentsHeaderHome() {
   return (
     <section
       id="home"
-      className="
-        min-h-screen 
-        grid 
-        grid-cols-1 md:grid-cols-2 
-        items-center
-        gap-12
-        px-8 sm:px-12 md:px-20 lg:px-36 
-        pt-16 md:pt-24 
-        bg-gray-900
-      "
+      className="min-h-screen grid grid-cols-1 md:grid-cols-2 items-center gap-12 px-8 sm:px-12 md:px-20 lg:px-36 pt-16 md:pt-24 bg-gray-900"
     >
       {/* LEFT CONTENT */}
       <div className="w-full text-center md:text-left space-y-4">
-        <h1 className="text-4xl sm:text-5xl md:text-6xl font-extrabold tracking-wide text-white">
+        <h1 className="mt-10 sm:mt-6 text-4xl sm:text-5xl md:text-6xl font-extrabold tracking-wide text-white">
           Hi, I'm{" "}
           <span className="bg-gradient-to-r from-purple-400 to-pink-500 text-transparent bg-clip-text">
             Abiyan Mirza

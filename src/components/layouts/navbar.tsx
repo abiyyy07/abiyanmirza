@@ -1,6 +1,6 @@
 "use client";
 
-import { FaHome, FaInstagram } from "react-icons/fa";
+import { FaCode, FaHome, FaInstagram } from "react-icons/fa";
 import { CgProfile, CgWebsite } from "react-icons/cg";
 import Link from "next/link";
 import { useEffect, useRef, useState } from "react";
@@ -90,7 +90,7 @@ export default function Navbar() {
           </button>
 
           <button onClick={() => scrollToRef("skill")} className="flex items-center gap-3 hover:text-purple-400">
-            <CgWebsite /> Skill
+            <FaCode /> Skill
           </button>
 
           <button onClick={() => scrollToRef("project")} className="flex items-center gap-3 hover:text-purple-400">

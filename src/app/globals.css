@@ -3,9 +3,7 @@
 @tailwind utilities;
 
 html, body {
-  overflow-x: visible !important;
-  /* pastikan body dapat menampung fixed elements di luar lebar layar */
-  min-height: 100%;
+  overflow-x: hidden;
 }
 
 /* jika kamu sengaja menyembunyikan scrollbar, biarkan seperti ini */

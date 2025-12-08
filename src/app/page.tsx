@@ -18,12 +18,12 @@ export const metadata: Metadata = {
 
 export default function Home() {
   return (
-    <>
+    <div>
       <ComponentsHeaderHome />
       <ComponentsAboutHome />
       <ComponentsSkillHome />
       <ComponentsProjectHome />
       <ComponentsCollaboreteHome />
-    </>
+    </div>
   )
 }
