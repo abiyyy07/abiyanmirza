@@ -8,7 +8,11 @@ export default function Project() {
             <head>
                 <title>Abiyan | Project</title>
             </head>
-            <div className="flex flex-col items-center justify-center min-h-screen bg-gray-800 text-white px-4 md:px-10">
+            <div
+                className="flex flex-col items-center justify-center min-h-screen 
+                bg-gradient-to-b from-gray-900 via-gray-900/90 to-purple-700 
+                text-white px-4 md:px-10 py-16"
+            >
                 <div className="text-3xl font-bold mb-6 text-white mt-8">All My Projects</div>
                 <div className="w-full max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-8">
                     {/* ====================================================== */}

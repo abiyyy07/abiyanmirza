@@ -1,7 +1,11 @@
 import type { Metadata } from "next";
 
 // Components
-import CopyHomeComponents from "@/components/layouts/home/copy";
+import ComponentsHeaderHome from "@/components/layouts/home/header_home";
+import ComponentsAboutHome from "@/components/layouts/home/about_home";
+import ComponentsSkillHome from "@/components/layouts/home/skill_home";
+import ComponentsProjectHome from "@/components/layouts/home/project_home";
+import ComponentsCollaboreteHome from "@/components/layouts/home/collaborate_home";
 
 export const metadata: Metadata = {
   title: "Abiyan Mirza",
@@ -15,7 +19,11 @@ export const metadata: Metadata = {
 export default function Home() {
   return (
     <>
-      <CopyHomeComponents />
+      <ComponentsHeaderHome />
+      <ComponentsAboutHome />
+      <ComponentsSkillHome />
+      <ComponentsProjectHome />
+      <ComponentsCollaboreteHome />
     </>
   )
 }

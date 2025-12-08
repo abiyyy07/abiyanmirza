@@ -2,10 +2,26 @@
 @tailwind components;
 @tailwind utilities;
 
+html, body {
+  overflow-x: visible !important;
+  /* pastikan body dapat menampung fixed elements di luar lebar layar */
+  min-height: 100%;
+}
+
+/* jika kamu sengaja menyembunyikan scrollbar, biarkan seperti ini */
 .hide-scrollbar {
   -ms-overflow-style: none; /* IE & Edge */
   scrollbar-width: none; /* Firefox */
 }
 .hide-scrollbar::-webkit-scrollbar {
   display: none; /* Chrome, Safari, Opera */
+}
+
+/* Hide scrollbar */
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+.scrollbar-hide {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
 }

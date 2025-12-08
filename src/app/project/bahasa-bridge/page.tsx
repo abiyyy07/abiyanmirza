@@ -40,7 +40,7 @@ export default function BahasaBridge() {
         <title>Project | Bahasa Bridge</title>
       </head>
 
-      <div className="bg-gray-800 min-h-screen p-6">
+      <div className="min-h-screen p-6 py-20 bg-gradient-to-b from-gray-900 from-20% via-gray-900/90 via-70% to-purple-700 to-100%">
         {/* Judul */}
         <h1 className="text-3xl font-bold text-purple-500 mb-4 text-center">
           Bahasa Bridge – A Mobile Learning App
@@ -48,9 +48,9 @@ export default function BahasaBridge() {
 
         {/* Tags */}
         <div className="flex flex-wrap items-center justify-center gap-2 mb-6">
-          <div className="text-white border-2 border-white pr-2 pl-2 rounded-lg text-lg font-semibold">Mobile App</div>
-          <div className="text-white border-2 border-white pr-2 pl-2 rounded-lg text-lg font-semibold">Flutter</div>
-          <div className="text-white border-2 border-white pr-2 pl-2 rounded-lg text-lg font-semibold">Education App</div>
+          <div className="text-white border-2 border-white pr-2 pl-2 rounded-xl text-lg font-semibold">Mobile App</div>
+          <div className="text-white border-2 border-white pr-2 pl-2 rounded-xl text-lg font-semibold">Flutter</div>
+          <div className="text-white border-2 border-white pr-2 pl-2 rounded-xl text-lg font-semibold">Education App</div>
         </div>
 
         {/* Screenshot scrollable */}
