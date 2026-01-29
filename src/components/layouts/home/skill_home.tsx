@@ -3,7 +3,7 @@
 import React, { useState } from "react";
 import { BiLogoTypescript } from "react-icons/bi";
 import { IoLogoFirebase } from "react-icons/io5";
-import { RiTailwindCssFill } from "react-icons/ri";
+import { RiSupabaseFill, RiTailwindCssFill } from "react-icons/ri";
 import {
   SiNextdotjs,
   SiFlutter,
@@ -66,6 +66,7 @@ export default function ComponentsSkillHome({
         { name: "Tailwind", icon: <RiTailwindCssFill /> },
         { name: "Node.js", icon: <SiNodedotjs /> },
         { name: "Firebase", icon: <IoLogoFirebase /> },
+        { name: "Supabase", icon: <RiSupabaseFill />}
       ],
     },
     mobile: {

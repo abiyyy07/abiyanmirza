@@ -49,7 +49,7 @@ export default function Footer() {
 
         {/* COPYRIGHT */}
         <div className="mt-6 text-center text-sm text-purple-100/70 border-t border-purple-400/20 pt-4">
-          © {new Date().getFullYear()} Abiyan Mirza — All rights reserved.
+          © 2025 Abiyan Mirza — All rights reserved.
         </div>
       </div>
     </footer>

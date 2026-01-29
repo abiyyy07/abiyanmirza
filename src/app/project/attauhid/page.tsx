@@ -2,31 +2,24 @@
 
 import { useState } from "react";
 import Image from "next/image";
-import { FaChevronLeft, FaTimes, FaLayerGroup, FaCode, FaRocket } from "react-icons/fa";
+import { FaChevronLeft, FaTimes, FaLayerGroup, FaCode, FaRocket, FaGlobe } from "react-icons/fa";
 import Link from "next/link";
 
-export default function BahasaBridge() {
+export default function Attauhid() {
   const [selectedImage, setSelectedImage] = useState<string | null>(null);
 
   const screenshots = [
-    "/projek/bahasa-bridge/bb-ss1.jpg",
-    "/projek/bahasa-bridge/bb-ss2.jpg",
-    "/projek/bahasa-bridge/bb-ss3.jpg",
-    "/projek/bahasa-bridge/bb-ss4.jpg",
-    "/projek/bahasa-bridge/bb-ss5.jpg",
-    "/projek/bahasa-bridge/bb-ss6.jpg",
-    "/projek/bahasa-bridge/bb-ss7.jpg",
-    "/projek/bahasa-bridge/bb-ss8.jpg",
-    "/projek/bahasa-bridge/bb-ss9.jpg",
-    "/projek/bahasa-bridge/bb-ss10.jpg",
-    "/projek/bahasa-bridge/bb-ss11.jpg",
+    "/projek/attauhid.png",
+    "/projek/attauhid/at-ss1.png",
+    "/projek/attauhid/at-ss2.png",
+    "/projek/attauhid/at-ss3.png",
+    "/projek/attauhid/at-ss4.png",
+    "/projek/attauhid/at-ss5.png",
   ];
-
-  const techStack = ["Flutter", "Dart", "Firebase", "GetX", "Firestore"];
 
   return (
     <div className="min-h-screen bg-[#030712] text-gray-100 selection:bg-purple-500/30">
-      <title>Bahasa Bridge | Abiyan</title>
+      <title>At-Tauhid Mosque | Abiyan</title>
 
       {/* Background Glow */}
       <div className="fixed inset-0 overflow-hidden pointer-events-none">
@@ -47,12 +40,12 @@ export default function BahasaBridge() {
         {/* Header Section */}
         <section className="text-center mb-12">
           <h1 className="text-4xl md:text-6xl font-extrabold mb-6 bg-clip-text text-transparent text-white">
-            Bahasa Bridge
+            At-Tauhid Mosque
           </h1>
-          <p className="text-xl text-purple-400 font-medium mb-8">A Mobile Learning App</p>
+          <p className="text-xl text-purple-400 font-medium mb-8">Official Website of At-Tauhid Mosque</p>
           
           <div className="flex flex-wrap justify-center gap-3">
-            {["Mobile App", "Flutter", "Education App"].map((tag) => (
+            {["Web App", "Next JS", "Firebase", "Social Web"].map((tag) => (
               <span key={tag} className="px-4 py-1.5 bg-gray-900 border border-gray-800 rounded-full text-sm font-semibold text-gray-300">
                 {tag}
               </span>
@@ -60,20 +53,20 @@ export default function BahasaBridge() {
           </div>
         </section>
 
-        {/* Hero Gallery - Horizontal Scroll */}
-        <section className="mb-12">
-          <div className="flex overflow-x-auto gap-6 pb-8 snap-x hide-scrollbar mask-fade-edges">
+        {/* Hero Gallery - Horizontal Scroll (Lanskap 16:9) */}
+        <section className="mb-16">
+          <div className="flex overflow-x-auto gap-4 pb-6 snap-x hide-scrollbar mask-fade-edges">
             {screenshots.map((src, index) => (
               <div 
                 key={index}
-                className="relative flex-shrink-0 w-64 aspect-[9/19] rounded-3xl overflow-hidden border border-gray-800 bg-gray-900 snap-center cursor-zoom-in group shadow-2xl transition-transform hover:scale-[1.02]"
+                className="relative flex-shrink-0 w-[300px] md:w-[450px] aspect-video rounded-2xl overflow-hidden border border-gray-800 bg-gray-900 snap-center cursor-zoom-in group shadow-xl transition-all hover:border-purple-500/50"
                 onClick={() => setSelectedImage(src)}
               >
                 <Image
                   src={src}
-                  alt={`Screenshot ${index + 1}`}
+                  alt={`Website Screenshot ${index + 1}`}
                   fill
-                  className="object-cover"
+                  className="object-cover group-hover:scale-105 transition-transform duration-500"
                 />
                 <div className="absolute inset-0 bg-black/20 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
                   <span className="bg-white/10 backdrop-blur-md p-3 rounded-full border border-white/20">🔍</span>
@@ -81,24 +74,24 @@ export default function BahasaBridge() {
               </div>
             ))}
           </div>
-          <p className="text-center text-gray-500 text-sm mt-4">Scroll horizontally to see more →</p>
+          <p className="text-center text-gray-500 text-xs mt-2 italic flex items-center justify-center gap-2">
+            <span>← Scroll to explore</span>
+            <span className="w-1 h-1 bg-gray-700 rounded-full" />
+            <span>Click to enlarge →</span>
+          </p>
         </section>
 
         {/* Details Grid */}
         <div className="grid md:grid-cols-3 gap-8 items-start">
-          {/* Main Description */}
           <div className="md:col-span-2 space-y-8">
             <div className="bg-gray-900/40 border border-gray-800 p-8 rounded-3xl backdrop-blur-sm">
               <h2 className="text-2xl font-bold mb-4 flex items-center gap-3">
-                <FaRocket className="text-purple-500" /> Description
+                <FaRocket className="text-purple-500" /> Project Overview
               </h2>
               <p className="text-gray-400 leading-relaxed text-lg">
-                Bahasa Bridge is a mobile application platform for learning English specifically designed for Indonesians. 
-                There are various quiz methods provided to support learning and provide results and final points for assessment.
+                The At-Tauhid Mosque website serves as the digital face of the community. It provides a centralized hub for congregation members to access information, read the latest news, and stay updated with mosque activities.
                 <br /><br />
-                The app features diverse quiz types, such as multiple choice in Grammar, Vocabulary, Reading Comprehension, 
-                and Idiom Phrases. We also provide puzzles for children and manual typing modes to arrange words. 
-                Leaderboards are included to motivate users to keep developing their skills.
+                Designed with a focus on accessibility and modern aesthetics, the platform integrates seamlessly with the <strong>AMMAT</strong> management system to display real-time updates and articles directly from the mosque's administration divisions.
               </p>
             </div>
           </div>
@@ -110,7 +103,7 @@ export default function BahasaBridge() {
                 <FaCode className="text-purple-500" /> Tech Stack
               </h3>
               <div className="flex flex-wrap gap-2">
-                {techStack.map((tech) => (
+                {["Next JS", "React", "Tailwind CSS", "Firebase"].map((tech) => (
                   <span key={tech} className="bg-purple-500/10 text-purple-400 border border-purple-500/20 px-3 py-1 rounded-lg text-sm font-bold">
                     {tech}
                   </span>
@@ -120,32 +113,32 @@ export default function BahasaBridge() {
 
             <div className="bg-gray-900/40 border border-gray-800 p-6 rounded-3xl">
               <h3 className="text-lg font-bold mb-4 flex items-center gap-2">
-                <FaLayerGroup className="text-purple-500" /> Key Features
+                <FaLayerGroup className="text-purple-500" /> Web Features
               </h3>
               <ul className="text-sm text-gray-400 space-y-3">
-                <li className="flex items-center gap-2">✓ Diverse English Quizzes</li>
-                <li className="flex items-center gap-2">✓ Children's Learning Puzzles</li>
-                <li className="flex items-center gap-2">✓ Interactive Typing Challenges</li>
-                <li className="flex items-center gap-2">✓ Global Leaderboards</li>
+                <li className="flex items-center gap-2">✓ Dynamic CMS News</li>
+                <li className="flex items-center gap-2">✓ Responsive Layout</li>
+                <li className="flex items-center gap-2">✓ Information About Mosque</li>
+                <li className="flex items-center gap-2">✓ Social Web</li>
               </ul>
             </div>
           </div>
         </div>
       </main>
 
-      {/* Lightbox Modal */}
+      {/* Lightbox Modal (Untuk Web App lebih lebar) */}
       {selectedImage && (
         <div 
-          className="fixed inset-0 bg-black/95 z-[100] flex items-center justify-center p-4 backdrop-blur-sm animate-in fade-in duration-300"
+          className="fixed inset-0 bg-black/95 z-[100] flex items-center justify-center p-6 backdrop-blur-md animate-in fade-in duration-300"
           onClick={() => setSelectedImage(null)}
         >
           <button className="absolute top-8 right-8 text-white p-2 hover:bg-white/10 rounded-full transition-colors">
-            <FaTimes size={24} />
+            <FaTimes size={28} />
           </button>
-          <div className="relative w-full max-w-sm h-[80vh]">
+          <div className="relative w-full max-w-6xl aspect-video">
             <Image
               src={selectedImage}
-              alt="Preview Full"
+              alt="Website Full Preview"
               fill
               className="object-contain"
             />
@@ -162,7 +155,7 @@ export default function BahasaBridge() {
           scrollbar-width: none;
         }
         .mask-fade-edges {
-          mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
+          mask-image: linear-gradient(to right, transparent, black 8%, black 92%, transparent);
         }
       `}</style>
     </div>
