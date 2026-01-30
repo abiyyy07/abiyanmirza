@@ -3,10 +3,13 @@
 import { FaCode, FaHome, FaInstagram } from "react-icons/fa";
 import { CgProfile, CgWebsite } from "react-icons/cg";
 import Link from "next/link";
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useState } from "react";
+import { usePathname, useRouter } from "next/navigation";
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
+  const pathname = usePathname()
+  const router = useRouter();
 
   // Tutup menu jika klik luar atau scroll
   useEffect(() => {
@@ -24,6 +27,17 @@ export default function Navbar() {
     }
   };
 
+  const handleNavClick = (id: string) => {
+    setIsOpen(false);
+
+    if (pathname !== "/") {
+      router.push(`/#${id}`);
+    } else {
+      const el = document.getElementById(id);
+      el?.scrollIntoView({ behavior: "smooth" });
+    }
+  };
+
   return (
     <>
       {/* NAVBAR */}
@@ -36,10 +50,10 @@ export default function Navbar() {
 
           {/* Desktop Menu */}
           <div className="hidden md:flex items-center gap-8 font-medium">
-            <button onClick={() => scrollToRef("home")} className="hover:text-purple-400 transition">Home</button>
-            <button onClick={() => scrollToRef("about")} className="hover:text-purple-400 transition">About</button>
-            <button onClick={() => scrollToRef("skill")} className="hover:text-purple-400 transition">Skill</button>
-            <button onClick={() => scrollToRef("project")} className="hover:text-purple-400 transition">Projects</button>
+            <button onClick={() => handleNavClick("home")} className="hover:text-purple-400 transition">Home</button>
+            <button onClick={() => handleNavClick("about")} className="hover:text-purple-400 transition">About</button>
+            <button onClick={() => handleNavClick("skill")} className="hover:text-purple-400 transition">Skill</button>
+            <button onClick={() => handleNavClick("project")} className="hover:text-purple-400 transition">Projects</button>
 
             <Link 
               href="https://www.instagram.com/abiyanm_/" 
