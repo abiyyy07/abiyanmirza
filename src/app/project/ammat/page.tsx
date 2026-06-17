@@ -1,12 +1,16 @@
-'use client';
+"use client";
 
-import { useState } from "react";
+import { useState, useEffect, useCallback } from "react";
 import Image from "next/image";
-import { FaChevronLeft, FaTimes, FaLayerGroup, FaCode, FaRocket, FaUsers } from "react-icons/fa";
+import { FaChevronLeft, FaTimes, FaLayerGroup, FaCode, FaRocket, FaChevronRight } from "react-icons/fa";
 import Link from "next/link";
 
 export default function Ammat() {
   const [selectedImage, setSelectedImage] = useState<string | null>(null);
+  
+  // State untuk melacak indeks foto aktif dan status hover slider
+  const [currentIndex, setCurrentIndex] = useState(0);
+  const [isHovered, setIsHovered] = useState(false);
 
   const screenshots = [
     "/projek/ammat/am-ss10.jpg",
@@ -21,144 +25,215 @@ export default function Ammat() {
     "/projek/ammat/am-ss8.jpg",
   ];
 
+  const autoSlideInterval = 4000;
+
+  // Navigasi manual slide (next)
+  const nextSlide = useCallback(() => {
+    setCurrentIndex((prevIndex) =>
+      prevIndex === screenshots.length - 3 ? 0 : prevIndex + 1
+    );
+  }, [screenshots.length]);
+
+  // Navigasi manual slide (sebelumnya)
+  const prevSlide = () => {
+    setCurrentIndex((prevIndex) =>
+      prevIndex === 0 ? screenshots.length - 3 : prevIndex - 1
+    );
+  };
+
+  // Slide otomatis
+  useEffect(() => {
+    if (isHovered) return;
+    const slideTimer = setInterval(() => {
+      nextSlide();
+    }, autoSlideInterval);
+
+    return () => clearInterval(slideTimer);
+  }, [nextSlide, isHovered]);
+
   return (
-    <div className="min-h-screen bg-[#030712] text-gray-100 selection:bg-purple-500/30">
+    <div className="min-h-screen bg-zinc-900 text-zinc-100 font-mono selection:bg-emerald-400/30 pb-20 relative">
       <title>AMMAT | Abiyan</title>
 
-      {/* Background Glow */}
-      <div className="fixed inset-0 overflow-hidden pointer-events-none">
-        <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-purple-600/10 blur-[120px] rounded-full" />
-        <div className="absolute bottom-0 left-0 w-[500px] h-[500px] bg-blue-600/10 blur-[120px] rounded-full" />
-      </div>
-
-      <main className="relative z-10 max-w-5xl mx-auto px-6 py-12 lg:py-24">
-        {/* Back Button */}
-        <Link 
-          href="/project" 
-          className="inline-flex items-center gap-2 text-gray-400 hover:text-white transition-colors mb-12 group"
+      <main className="relative z-10 max-w-5xl mx-auto px-6 pt-24 lg:pt-28">
+        <Link
+          href="/project"
+          className="inline-flex items-center gap-2 text-zinc-500 hover:text-emerald-400 font-bold text-xs uppercase tracking-wider mb-10 group transition-colors"
         >
           <FaChevronLeft className="group-hover:-translate-x-1 transition-transform" />
-          <span>Back to Projects</span>
+          <span>Back to View All Projects</span>
         </Link>
 
-        {/* Header Section */}
-        <section className="text-center mb-12">
-          <h1 className="text-4xl md:text-6xl font-extrabold mb-6 bg-clip-text text-transparent text-white">
-            AMMAT
-          </h1>
-          <p className="text-xl text-purple-400 font-medium mb-8">Mosque Management Mobile App</p>
-          
-          <div className="flex flex-wrap justify-center gap-3">
-            {["Mobile App", "Flutter", "Management", "Social App"].map((tag) => (
-              <span key={tag} className="px-4 py-1.5 bg-gray-900 border border-gray-800 rounded-full text-sm font-semibold text-gray-300">
-                {tag}
-              </span>
-            ))}
-          </div>
-        </section>
-
-        {/* Hero Gallery - Horizontal Scroll */}
-        <section className="mb-12">
-          <div className="flex overflow-x-auto gap-6 pb-8 snap-x hide-scrollbar mask-fade-edges">
-            {screenshots.map((src, index) => (
-              <div 
-                key={index}
-                className="relative flex-shrink-0 w-64 aspect-[9/19] rounded-3xl overflow-hidden border border-gray-800 bg-gray-900 snap-center cursor-zoom-in group shadow-2xl transition-transform hover:scale-[1.02]"
-                onClick={() => setSelectedImage(src)}
-              >
-                <Image
-                  src={src}
-                  alt={`Screenshot ${index + 1}`}
-                  fill
-                  className="object-cover"
-                />
-                <div className="absolute inset-0 bg-black/20 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
-                  <span className="bg-white/10 backdrop-blur-md p-3 rounded-full border border-white/20">🔍</span>
+        {/* HEADER SPECIFICATION */}
+        <section 
+          className="mb-10 bg-zinc-950 border-4 border-black p-4 shadow-[6px_6px_0px_0px_#000] relative select-none group/slider"
+          onMouseEnter={() => setIsHovered(true)}
+          onMouseLeave={() => setIsHovered(false)}
+        >
+          {/* CAROUSEL VIEWER PANEL - Skala lebar max-w-3xl agar menampung 3 bingkai potret secara presisi */}
+          <div className="relative w-full max-w-3xl mx-auto aspect-[4/3] sm:aspect-[16/11] border-2 border-black bg-zinc-900 overflow-hidden">
+            
+            {/* SLIDE WRAPPER (Sistem geser berbasis kelipatan sepertiga area / 33.333%) */}
+            <div 
+              className="absolute inset-0 flex transition-transform duration-500 ease-out h-full"
+              style={{ transform: `translateX(-${currentIndex * 33.333}%)` }}
+            >
+              {screenshots.map((src, index) => (
+                <div
+                  key={index}
+                  className="relative w-1/3 h-full flex-shrink-0 border-r border-black last:border-r-0 cursor-zoom-in group/item overflow-hidden p-1.5 bg-zinc-950"
+                  onClick={() => setSelectedImage(src)}
+                >
+                  <div className="relative w-full h-full border border-zinc-800 overflow-hidden">
+                    <Image
+                      src={src}
+                      alt={`Screenshot ${index + 1}`}
+                      fill
+                      priority={index < 3}
+                      className="transition-all duration-300 contrast-105 object-cover"
+                    />
+                    {/* HOVER EXPAND OVERLAY */}
+                    <div className="absolute inset-0 bg-black/40 opacity-0 group-hover/item:opacity-100 transition-opacity flex items-center justify-center">
+                      <span className="bg-black text-emerald-400 border border-emerald-400 font-bold text-[9px] uppercase px-2.5 py-1 shadow-[2px_2px_0px_0px_#000]">
+                        Expand [0{index + 1}]
+                      </span>
+                    </div>
+                  </div>
                 </div>
-              </div>
+              ))}
+            </div>
+
+            {/* MANUAL BUTTON CONTROL: PREVIOUS */}
+            <button
+              onClick={prevSlide}
+              className="absolute left-3 top-1/2 -translate-y-1/2 z-30 bg-black text-zinc-400 hover:text-emerald-400 border-2 border-black hover:border-emerald-400 w-8 h-8 flex items-center justify-center font-bold text-xs active:translate-x-[1px] active:translate-y-[1px] active:shadow-none transition-all"
+              aria-label="Previous Slide"
+            >
+              <FaChevronLeft size={12} />
+            </button>
+
+            {/* MANUAL BUTTON CONTROL: NEXT */}
+            <button
+              onClick={nextSlide}
+              className="absolute right-3 top-1/2 -translate-y-1/2 z-30 bg-black text-zinc-400 hover:text-emerald-400 border-2 border-black hover:border-emerald-400 w-8 h-8 flex items-center justify-center font-bold text-xs active:translate-x-[1px] active:translate-y-[1px] active:shadow-none transition-all"
+              aria-label="Next Slide"
+            >
+              <FaChevronRight size={12} />
+            </button>
+          </div>
+
+          {/* STEP INDICATORS (SLIDER DOTS - Menggunakan Slice agar indikator pas dengan ruang geser) */}
+          <div className="flex flex-wrap justify-center gap-1.5 mt-4 max-w-xs mx-auto">
+            {screenshots.slice(0, screenshots.length - 2).map((_, index) => (
+              <button
+                key={index}
+                onClick={() => setCurrentIndex(index)}
+                className={`w-2 h-2 border border-black transition-all ${
+                  currentIndex === index 
+                    ? "bg-emerald-400 scale-110 shadow-[1px_1px_0px_0px_#000]" 
+                    : "bg-zinc-800 hover:bg-zinc-600"
+                }`}
+                aria-label={`Go to slide ${index + 1}`}
+              />
             ))}
           </div>
-          <p className="text-center text-gray-500 text-sm mt-4">Scroll horizontally to see more →</p>
         </section>
 
-        {/* Details Grid */}
-        <div className="grid md:grid-cols-3 gap-8 items-start">
-          {/* Main Description */}
-          <div className="md:col-span-2 space-y-8">
-            <div className="bg-gray-900/40 border border-gray-800 p-8 rounded-3xl backdrop-blur-sm">
-              <h2 className="text-2xl font-bold mb-4 flex items-center gap-3">
-                <FaRocket className="text-purple-500" /> Description
-              </h2>
-              <p className="text-gray-400 leading-relaxed text-lg">
-                <strong>AMMAT</strong> (At-Tauhid Mosque Management Application) is a specialized platform designed to digitalize and streamline mosque administration. 
-                <br /><br />
-                The application features a robust Role-Based Access Control (RBAC) system, catering to different stakeholders from <strong>Takmir</strong> (Mosque Committee) to <strong>Mosque Youth</strong> members. It organizes the youth into five distinct functional divisions, allowing for precise task management, daily activity logging, and integrated news publishing to the mosque website.
+        {/* DATA CORE DETAILS */}
+        <div className="grid md:grid-cols-12 gap-6 items-start">
+          {/* LEFT CONTENT */}
+          <div className="md:col-span-8 bg-zinc-950 border-4 border-black p-6 md:p-8 shadow-[4px_4px_0px_0px_#000] space-y-4">
+            <h2 className="text-md font-black uppercase text-white tracking-wide flex items-center gap-2 border-b border-zinc-800 pb-3">
+              <FaRocket className="text-emerald-400 text-sm" /> Description
+            </h2>
+            <div className="text-zinc-400 text-xs sm:text-sm leading-relaxed tracking-wide text-justify space-y-4">
+              <p>
+                <span className="text-white font-bold">AMMAT</span> (At-Tauhid Mosque Management Application) is a specialized platform designed to digitalize and streamline mosque administration.
+              </p>
+              <p>
+                The application features a robust Role-Based Access Control (RBAC) system, catering to different stakeholders from <span className="text-white font-bold">Takmir</span> (Mosque Committee) to <span className="text-white font-bold">Mosque Youth</span> members. It organizes the youth into five distinct functional divisions, allowing for precise task management, daily activity logging, and integrated news publishing to the mosque website.
               </p>
             </div>
           </div>
 
-          {/* Sidebar Info */}
-          <div className="space-y-4">
-            <div className="bg-gray-900/40 border border-gray-800 p-6 rounded-3xl">
-              <h3 className="text-lg font-bold mb-4 flex items-center gap-2">
-                <FaCode className="text-purple-500" /> Tech Stack
+          {/* RIGHT SIDE */}
+          <div className="md:col-span-4 space-y-4 w-full">
+            
+            {/* Tech Module */}
+            <div className="bg-zinc-950 border-4 border-black p-5 shadow-[4px_4px_0px_0px_#000]">
+              <h3 className="text-xs font-black uppercase text-zinc-500 tracking-widest mb-4 border-b border-zinc-800 pb-2 flex items-center gap-2">
+                <FaCode className="text-emerald-400" /> TECH STACK
               </h3>
-              <div className="flex flex-wrap gap-2">
+              <div className="flex flex-wrap gap-1.5">
                 {["Flutter", "Dart", "Firebase", "GetX"].map((tech) => (
-                  <span key={tech} className="bg-purple-500/10 text-purple-400 border border-purple-500/20 px-3 py-1 rounded-lg text-sm font-bold">
+                  <span key={tech} className="bg-zinc-900 text-emerald-400 border border-zinc-800 px-2 py-1 text-[10px] font-black uppercase tracking-tight">
                     {tech}
                   </span>
                 ))}
               </div>
             </div>
 
-            <div className="bg-gray-900/40 border border-gray-800 p-6 rounded-3xl">
-              <h3 className="text-lg font-bold mb-4 flex items-center gap-2">
-                <FaLayerGroup className="text-purple-500" /> Core Features
+            {/* Feature Module */}
+            <div className="bg-zinc-950 border-4 border-black p-5 shadow-[4px_4px_0px_0px_#000]">
+              <h3 className="text-xs font-black uppercase text-zinc-500 tracking-widest mb-4 border-b border-zinc-800 pb-2 flex items-center gap-2">
+                <FaLayerGroup className="text-emerald-400" /> Core Features
               </h3>
-              <ul className="text-sm text-gray-400 space-y-3">
-                <li className="flex items-center gap-2">✓ Multi-Role System (Takmir/Youth)</li>
-                <li className="flex items-center gap-2">✓ 5 Division Workflow Management</li>
-                <li className="flex items-center gap-2">✓ Daily Activity Logging</li>
-                <li className="flex items-center gap-2">✓ Web News CMS Integration</li>
+              <ul className="text-[11px] font-bold uppercase text-zinc-400 space-y-2.5 tracking-wide">
+                <li className="flex items-center gap-2 text-zinc-300">
+                  <span className="text-emerald-400">&gt;</span> Multi-Role System (Takmir/Youth)
+                </li>
+                <li className="flex items-center gap-2 text-zinc-300">
+                  <span className="text-emerald-400">&gt;</span> 5 Division Workflow Management
+                </li>
+                <li className="flex items-center gap-2 text-zinc-300">
+                  <span className="text-emerald-400">&gt;</span> Daily Activity Logging
+                </li>
+                <li className="flex items-center gap-2 text-zinc-300">
+                  <span className="text-emerald-400">&gt;</span> Web News CMS Integration
+                </li>
               </ul>
             </div>
+
           </div>
+
         </div>
       </main>
 
-      {/* Lightbox Modal */}
+      {/* FULL PREVIEW PORTRAIT LIGHTBOX MODAL */}
       {selectedImage && (
-        <div 
-          className="fixed inset-0 bg-black/95 z-[100] flex items-center justify-center p-4 backdrop-blur-sm animate-in fade-in duration-300"
+        <div
+          className="fixed inset-0 bg-black/95 z-[100] flex items-center justify-center p-4 backdrop-blur-sm transition-all animate-in fade-in duration-200"
           onClick={() => setSelectedImage(null)}
         >
-          <button className="absolute top-8 right-8 text-white p-2 hover:bg-white/10 rounded-full transition-colors">
-            <FaTimes size={24} />
-          </button>
-          <div className="relative w-full max-w-sm h-[80vh]">
-            <Image
-              src={selectedImage}
-              alt="Preview Full"
-              fill
-              className="object-contain"
-            />
+          {/* WINDOW STYLE FOR LIGHTBOX - Mengunci tinggi maksimum jendela, bukan lebarnya */}
+          <div 
+            className="bg-zinc-950 border-4 border-black h-full max-h-[100vh] aspect-[9/19] shadow-[8px_8px_0px_0px_#000] relative flex flex-col overflow-hidden"
+            onClick={(e) => e.stopPropagation()}
+          >
+            {/* LIGHTBOX BAR */}
+            <div className="bg-black text-emerald-400 px-3 py-2 flex justify-between items-center text-[10px] sm:text-xs border-b-4 border-black font-bold uppercase select-none flex-shrink-0">
+              <span className="truncate pr-2">PREVIEW APP</span>
+              <button 
+                onClick={() => setSelectedImage(null)}
+                className="text-zinc-500 hover:text-white transition-colors flex items-center gap-1 text-[10px] sm:text-[11px] flex-shrink-0"
+              >
+                <FaTimes /> CLOSE
+              </button>
+            </div>
+            
+            {/* IMAGE FRAME CONTAINMENT - Mengisi sisa ruang jendela secara penuh dan fleksibel */}
+            <div className="relative flex-1 w-full bg-zinc-900 p-2">
+              <Image
+                src={selectedImage}
+                alt="System Preview"
+                fill
+                className="object-contain p-2 contrast-105"
+                priority
+              />
+            </div>
           </div>
         </div>
       )}
-
-      <style jsx global>{`
-        .hide-scrollbar::-webkit-scrollbar {
-          display: none;
-        }
-        .hide-scrollbar {
-          -ms-overflow-style: none;
-          scrollbar-width: none;
-        }
-        .mask-fade-edges {
-          mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
-        }
-      `}</style>
     </div>
   );
 }

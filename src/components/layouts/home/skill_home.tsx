@@ -1,31 +1,18 @@
 "use client";
 
 import React, { useState } from "react";
-import { BiLogoTypescript } from "react-icons/bi";
+import { BiLogoPostgresql, BiLogoTypescript } from "react-icons/bi";
+import { FaLaravel } from "react-icons/fa";
 import { IoLogoFirebase } from "react-icons/io5";
 import { RiSupabaseFill, RiTailwindCssFill } from "react-icons/ri";
-import {
-  SiNextdotjs,
-  SiFlutter,
-  SiGodotengine,
-  SiJavascript,
-  SiDart,
-  SiPostgresql,
-  SiFirebase,
-  SiDocker,
-  SiReact,
-  SiNodedotjs,
-} from "react-icons/si";
+import {SiNextdotjs,SiFlutter,SiGodotengine,SiDart,SiReact,SiNodedotjs,} from "react-icons/si";
 
-/* ---------------------------
-   Types
-   --------------------------- */
+// Types
 type TabKey = "web" | "mobile" | "game";
 
 interface TechItem {
   name: string;
   icon: React.ReactNode;
-  /** optional short label or version */
   meta?: string;
 }
 
@@ -40,15 +27,11 @@ interface SkillData {
 }
 
 interface ComponentsSkillHomeProps {
-  /** initial active tab (web | mobile | game) */
   initialTab?: TabKey;
-  /** optional callback ketika tab berubah */
   onChangeTab?: (tab: TabKey) => void;
 }
 
-/* ---------------------------
-   Component
-   --------------------------- */
+// Component Starts Here
 export default function ComponentsSkillHome({
   initialTab = "web",
   onChangeTab,
@@ -58,29 +41,31 @@ export default function ComponentsSkillHome({
   const skillData: SkillData = {
     web: {
       title: "Fullstack Web Developer",
-      desc: "As a fullstack web developer, I focus on creating modern, efficient, and high performance web apps. I combine clean UI, optimized backend systems, and reliable databases to ensure every project is fast, secure, and scalable. I enjoy turning ideas into real products with smooth functionality and a consistent user experience.",
+      desc: "Focusing on creating modern, efficient, and high-performance web apps. I combine clean UI layouts, optimized backend architecture, and reliable databases to ensure every project is fast, secure, and scalable. I enjoy turning complex system logic into functional web products.",
       stack: [
         { name: "Next.js", icon: <SiNextdotjs /> },
+        { name: "Laravel", icon: <FaLaravel /> },
         { name: "React", icon: <SiReact /> },
         { name: "Typescript", icon: <BiLogoTypescript /> },
         { name: "Tailwind", icon: <RiTailwindCssFill /> },
         { name: "Node.js", icon: <SiNodedotjs /> },
+        { name: "PostgreSQL", icon: <BiLogoPostgresql /> },
         { name: "Firebase", icon: <IoLogoFirebase /> },
-        { name: "Supabase", icon: <RiSupabaseFill />}
+        { name: "Supabase", icon: <RiSupabaseFill /> }
       ],
     },
     mobile: {
-      title: "Mobile Developer (Flutter)",
-      desc: "As a Mobile Developer fucused on Flutter, I build cross-platform mobile apps that feel natural and perform extremely well on both Android and iOS. And I focus on intuitive UI, stable architecture, and reusable components to keep apps clean, maintainable, and future proof.",
+      title: "Hobbyist Mobile App Developer",
+      desc: "Building cross-platform mobile apps using Flutter that perform seamlessly across Android and iOS platforms. I focus on implementing stable component architectures and crafting smooth, responsive interfaces to ensure long-term code maintainability.",
       stack: [
         { name: "Flutter", icon: <SiFlutter /> },
         { name: "Dart", icon: <SiDart /> },
-        { name: "Firebase", icon: <SiFirebase /> },
+        { name: "Firebase", icon: <IoLogoFirebase /> },
       ],
     },
     game: {
-      title: "Game Developer (Godot)",
-      desc: "As a game developer, I focus first on pixel art game before entering 3D Game. I use Godot to build 2D games with classic charm and modern polish. I focus on fluid player movement, hand-crafted animations, satisfying game feel, and clean modular code structure. My work often involves level design, state machines, NPC interactions, UI games, and small details that make pixel-art worlds feel alive.",
+      title: "Hobbyist Game Developer",
+      desc: "Creating 2D games for fun using the Godot Engine. I focus heavily on 2D pixel art environments, crafting smooth character controllers, fine-tuning hand-drawn state animations, and implementing clean modular systems to bring small virtual worlds to life.",
       stack: [
         { name: "Godot Engine", icon: <SiGodotengine /> },
         { name: "GDScript", icon: <SiGodotengine /> },
@@ -96,64 +81,81 @@ export default function ComponentsSkillHome({
   }
 
   return (
-    <section id="skill" className="w-full py-14 relative bg-gray-900">
-      {/* BACKGROUND BLOB */}
-      <div className="absolute inset-0 -z-10 opacity-40 blur-3xl">
-        <div className="w-72 h-72 bg-purple-500 rounded-full absolute top-10 left-20 mix-blend-multiply" />
-        <div className="w-72 h-72 bg-blue-500 rounded-full absolute bottom-10 right-20 mix-blend-multiply" />
-      </div>
+    <section id="skill" className="w-full py-20 relative bg-zinc-900 font-mono text-white overflow-hidden">
+      {/* Dekorasi Garis Grid Latar Belakang */}
+      <div className="absolute inset-0 bg-[linear-gradient(to_right,#27272a_1px,transparent_1px),linear-gradient(to_bottom,#27272a_1px,transparent_1px)] bg-[size:4rem_4rem] opacity-10 pointer-events-none"></div>
 
-      <div className="max-w-6xl mx-auto px-6">
-        {/* TITLE */}
-        <h2 className="text-3xl md:text-4xl font-bold text-center mb-12 text-white">Skills</h2>
+      <div className="max-w-6xl mx-auto px-6 relative z-10">
+        
+        {/* SECTION TITLE */}
+        <h2 className="text-3xl md:text-4xl font-black text-center mb-10 uppercase tracking-tight">
+          My Skills
+        </h2>
 
-        {/* FILTER BUTTONS */}
-        <div className="flex justify-center gap-4 mb-12 px-10">
+        {/* FILTER BUTTONS (RETRO ARCADES TABS) */}
+        <div className="flex flex-wrap justify-center gap-4 mb-14 max-w-2xl mx-auto">
           {([
-            { key: "web", label: "Web Developer" },
-            { key: "mobile", label: "Mobile Developer" },
-            { key: "game", label: "Game Developer" },
-          ] as { key: TabKey; label: string }[]).map((btn) => (
-            <button
-              key={btn.key}
-              onClick={() => changeTab(btn.key)}
-              className={`px-6 py-2 rounded-full text-sm transition-all border ${
-                active === btn.key
-                  ? "bg-gradient-to-r from-purple-500 to-blue-500 text-white border-transparent shadow-lg"
-                  : "bg-white/10 text-gray-300 border-white/20 hover:bg-white/20"
-              }`}
-              aria-pressed={active === btn.key}
-              aria-label={`Show ${btn.label}`}
-            >
-              {btn.label}
-            </button>
-          ))}
+            { key: "web", label: "Web Dev" },
+            { key: "mobile", label: "Mobile Dev" },
+            { key: "game", label: "Game Dev" },
+          ] as { key: TabKey; label: string }[]).map((btn) => {
+            const isSelected = active === btn.key;
+            return (
+              <button
+                key={btn.key}
+                onClick={() => changeTab(btn.key)}
+                className={`px-5 py-2 text-sm font-black uppercase tracking-wider border-4 border-black transition-all ${
+                  isSelected
+                    ? "bg-emerald-400 text-black shadow-[4px_4px_0px_0px_#000] translate-x-[-2px] translate-y-[-2px]"
+                    : "bg-zinc-950 text-zinc-400 hover:text-white hover:bg-zinc-800 shadow-[2px_2px_0px_0px_#000] active:translate-y-[2px] active:shadow-none"
+                }`}
+                aria-pressed={isSelected}
+                aria-label={`Show ${btn.label}`}
+              >
+                [ {btn.label} ]
+              </button>
+            );
+          })}
         </div>
 
-        {/* CONTENT */}
-        <div className="grid md:grid-cols-2 gap-12 items-start">
-          {/* LEFT — DESCRIPTION */}
-          <div className="space-y-4 -mt-1">
-            <h3 className="text-2xl font-bold bg-gradient-to-r from-purple-400 via-pink-400 to-blue-400 text-transparent bg-clip-text">
-                {current.title}
+        {/* DISPLAY BOX INTERFACE */}
+        <div className="grid md:grid-cols-12 gap-8 items-start bg-zinc-950 p-6 md:p-8 border-4 border-black shadow-[8px_8px_0px_0px_#000]">
+          
+          {/* LEFT — COMPONENT STATUS LOG / DESCRIPTION (4 Columns) */}
+          <div className="md:col-span-5 space-y-4 border-b-2 md:border-b-0 md:border-r-2 border-dashed border-zinc-800 pb-6 md:pb-0 md:pr-6">
+            <div className="text-xs font-bold text-emerald-400 tracking-widest uppercase">
+              Skill Description
+            </div>
+            <h3 className="text-xl font-black uppercase text-white tracking-wide">
+              {current.title}
             </h3>
-            <p className="text-gray-300 leading-relaxed">{current.desc}</p>
+            <p className="text-zinc-400 text-sm leading-relaxed tracking-wide text-justify">
+              {current.desc}
+            </p>
           </div>
 
-          {/* RIGHT — TECHNOLOGIES */}
-          <div className="grid grid-cols-2 gap-4">
-            {current.stack.map((item, i) => (
-              <div
-                key={i}
-                className="flex items-center gap-3 px-4 py-3 rounded-xl bg-white/10 border border-white/20 backdrop-blur-xl hover:scale-[1.03] transition"
-              >
-                <div className="text-xl text-white">{item.icon}</div>
-                <div className="flex flex-col">
-                  <span className="text-sm text-gray-200">{item.name}</span>
-                  {item.meta && <small className="text-xs text-gray-400">{item.meta}</small>}
+          {/* RIGHT — ITEM GRID SLOT (7 Columns) */}
+          <div className="md:col-span-7 space-y-4 md:pl-2">
+            <div className="text-xs font-bold text-zinc-500 tracking-widest uppercase mb-2">
+              -- Tech Stack List ({current.stack.length}) --
+            </div>
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+              {current.stack.map((item, i) => (
+                <div
+                  key={i}
+                  className="flex items-center gap-3 px-4 py-3 bg-zinc-900 border-2 border-black shadow-[4px_4px_0px_0px_#000] hover:bg-zinc-800 transition-colors group select-none"
+                >
+                  <div className="text-2xl text-emerald-400 group-hover:scale-110 transition-transform">
+                    {item.icon}
+                  </div>
+                  <div className="flex flex-col">
+                    <span className="text-sm font-bold text-zinc-200 tracking-wide uppercase">
+                      {item.name}
+                    </span>
+                  </div>
                 </div>
-              </div>
-            ))}
+              ))}
+            </div>
           </div>
         </div>
       </div>
