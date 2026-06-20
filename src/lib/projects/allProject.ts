@@ -15,7 +15,7 @@ export const projects: ProjectItem[] = [
   {
     id: "blog-afareza",
     title: "Afareza Studio Blog",
-    image: "/projek/blog-afareza.png",
+    image: "/projek/blog-afareza/AFSB1.png",
     type: "Web App",
     tags: ["Web App", "Next JS", "Company Blog"],
     description: "fareza Studio comes with a different perspective but a common goal. We present the Afareza Blog, aiming to share experiences, tutorials, tips and tricks on technology, programming, frameworks, and development progress.",
@@ -26,7 +26,7 @@ export const projects: ProjectItem[] = [
   {
     id: "invitya",
     title: "Invitya - Digital Invitation",
-    image: "/projek/invitya.png",
+    image: "/projek/invitya/INTY1.png",
     type: "Web App",
     tags: ["Web App", "Next JS", "Digital Invitation"],
     description: "An online platform that helps people easily create digital invitations for various events. You can customize existing themes to suit your event's structure. You can also manage guests and attendance features, as well as manage staff or committee members to help you manage guest attendance data.",
@@ -37,7 +37,7 @@ export const projects: ProjectItem[] = [
   {
     id: "afarezastudio",
     title: "Afareza Studio",
-    image: "/projek/afarezastudio.png",
+    image: "/projek/afarezastudio/AFTD1.png",
     type: "Web App",
     tags: ["Web App", "Next JS", "Company Profile"],
     description: "Afareza Studio is a creative tech based on Surabaya, dedicated to bridging the gap between complex visionary ideas and simple, functional digital realities. We don't just write code, we build digital innovations that provide easy solutions for the masses.",
@@ -48,7 +48,7 @@ export const projects: ProjectItem[] = [
   {
     id: "rid",
     title: "Record and Identification",
-    image: "/projek/rid.jpg",
+    image: "/projek/rid/RID1.png",
     type: "Web App",
     tags: ["Web App", "Next JS", "Manage App"],
     description: "A website functionally for manage any record and license who used for Police Department RID SSRP.",
@@ -58,7 +58,7 @@ export const projects: ProjectItem[] = [
   {
     id: "attauhid",
     title: "At-Tauhid Mosque",
-    image: "/projek/attauhid.png",
+    image: "/projek/attauhid/ATTH1.png",
     type: "Web App",
     tags: ["Web App", "Next JS", "Mosque/Social App"],
     description: "At-Tauhid Mosque is located in Pakal, West Surabaya. This website contains content and information about the mosque and religious events.",

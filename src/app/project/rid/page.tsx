@@ -13,12 +13,14 @@ export default function Rid() {
   const [isHovered, setIsHovered] = useState(false);
 
   const screenshots = [
-    "/projek/rid.jpg",
-    "/projek/rid/rid-ss1.png",
-    "/projek/rid/rid-ss2.png",
-    "/projek/rid/rid-ss3.png",
-    "/projek/rid/rid-ss4.png",
-    "/projek/rid/rid-ss5.png",
+    "/projek/rid/RID1.png",
+    "/projek/rid/RID2.png",
+    "/projek/rid/RID3.png",
+    "/projek/rid/RID4.png",
+    "/projek/rid/RID5.png",
+    "/projek/rid/RID6.png",
+    "/projek/rid/RID7.png",
+    "/projek/rid/RID8.png",
   ];
 
   const autoSlideInterval = 4000;

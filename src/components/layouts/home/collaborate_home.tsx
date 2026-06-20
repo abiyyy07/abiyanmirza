@@ -42,7 +42,7 @@ export default function ComponentsCollaboreteHome() {
 
         {/* APPRECIATION SUBTEXT / COPYRIGHT */}
         <div className="text-[11px] text-white uppercase tracking-widest pt-12">
-          © 2026 Abiyan Mirza // Thank you for visiting
+          Thank you for visiting
         </div>
       </div>
     </section>

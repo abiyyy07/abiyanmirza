@@ -13,12 +13,11 @@ export default function Attauhid() {
   const [isHovered, setIsHovered] = useState(false);
 
   const screenshots = [
-    "/projek/attauhid.png",
-    "/projek/attauhid/at-ss1.png",
-    "/projek/attauhid/at-ss2.png",
-    "/projek/attauhid/at-ss3.png",
-    "/projek/attauhid/at-ss4.png",
-    "/projek/attauhid/at-ss5.png",
+    "/projek/attauhid/ATTH1.png",
+    "/projek/attauhid/ATTH2.png",
+    "/projek/attauhid/ATTH3.png",
+    "/projek/attauhid/ATTH4.png",
+    "/projek/attauhid/ATTH5.png",
   ];
 
   const autoSlideInterval = 4000;
@@ -188,7 +187,7 @@ export default function Attauhid() {
             {/* Feature Module */}
             <div className="bg-zinc-950 border-4 border-black p-5 shadow-[4px_4px_0px_0px_#000]">
               <h3 className="text-xs font-black uppercase text-zinc-500 tracking-widest mb-4 border-b border-zinc-800 pb-2 flex items-center gap-2">
-                <FaLayerGroup className="text-emerald-400" /> Web Features
+                <FaLayerGroup className="text-emerald-400" /> Features System
               </h3>
               <ul className="text-[11px] font-bold uppercase text-zinc-400 space-y-2.5 tracking-wide">
                 <li className="flex items-center gap-2 text-zinc-300">

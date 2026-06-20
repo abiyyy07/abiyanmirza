@@ -13,12 +13,13 @@ export default function BlogAfareza() {
   const [isHovered, setIsHovered] = useState(false);
 
   const screenshots = [
-    "/projek/blog-afareza.png",
-    "/projek/blog-afareza/bg-ss1.png",
-    "/projek/blog-afareza/bg-ss2.png",
-    "/projek/blog-afareza/bg-ss3.png",
-    "/projek/blog-afareza/bg-ss4.png",
-    "/projek/blog-afareza/bg-ss5.png",
+    "/projek/blog-afareza/AFSB1.png",
+    "/projek/blog-afareza/AFSB2.png",
+    "/projek/blog-afareza/AFSB3.png",
+    "/projek/blog-afareza/AFSB4.png",
+    "/projek/blog-afareza/AFSB5.png",
+    "/projek/blog-afareza/AFSB6.png",
+    "/projek/blog-afareza/AFSB7.png",
   ];
 
   const autoSlideInterval = 4000;
@@ -66,7 +67,7 @@ export default function BlogAfareza() {
             Afareza Studio Blog
           </h1>
           <p className="text-sm md:text-base text-zinc-400 uppercase tracking-wide font-medium mb-6">
-            // Official Blog of Afareza Studio
+            Official Blog of Afareza Studio
           </p>
           
           <div className="flex flex-wrap gap-2 justify-center md:justify-start select-none">

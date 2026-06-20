@@ -162,7 +162,7 @@ export default function Afago() {
           {/* LEFT CONTENT */}
           <div className="md:col-span-8 bg-zinc-950 border-4 border-black p-6 md:p-8 shadow-[4px_4px_0px_0px_#000] space-y-4">
             <h2 className="text-md font-black uppercase text-white tracking-wide flex items-center gap-2 border-b border-zinc-800 pb-3">
-              <FaRocket className="text-emerald-400 text-sm" /> Description
+              <FaRocket className="text-emerald-400 text-sm" /> Project Overview
             </h2>
             <div className="text-zinc-400 text-xs sm:text-sm leading-relaxed tracking-wide text-justify space-y-4">
               <p>
@@ -194,7 +194,7 @@ export default function Afago() {
             {/* Feature Module */}
             <div className="bg-zinc-950 border-4 border-black p-5 shadow-[4px_4px_0px_0px_#000]">
               <h3 className="text-xs font-black uppercase text-zinc-500 tracking-widest mb-4 border-b border-zinc-800 pb-2 flex items-center gap-2">
-                <FaLayerGroup className="text-emerald-400" /> Key Features
+                <FaLayerGroup className="text-emerald-400" /> Features System
               </h3>
               <ul className="text-[11px] font-bold uppercase text-zinc-400 space-y-2.5 tracking-wide">
                 <li className="flex items-center gap-2 text-zinc-300">

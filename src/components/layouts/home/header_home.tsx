@@ -78,7 +78,7 @@ export default function ComponentsHeaderHome() {
         {/* Dialogue/Quote Box ala RPG Game */}
         <div className="p-4 bg-zinc-950 border-4 border-black shadow-[4px_4px_0px_0px_#000] relative">
           <span className="absolute -top-3 left-4 bg-zinc-900 px-2 text-xs text-zinc-500 font-bold uppercase">
-            System Message:
+            Quote:
           </span>
           <p className="text-zinc-300 text-sm sm:text-base leading-relaxed tracking-wide">
             "Code like you’re solving a mystery. Build like you’re changing the world."
@@ -92,7 +92,7 @@ export default function ComponentsHeaderHome() {
             target="_blank"
             className="inline-block px-6 py-3 bg-emerald-400 text-black font-black uppercase border-4 border-black shadow-[6px_6px_0px_0px_#000] hover:bg-emerald-300 active:translate-x-[3px] active:translate-y-[3px] active:shadow-[3px_3px_0px_0px_#000] transition-all w-fit mx-auto md:mx-0"
           >
-            [ Contact Me ]
+            Contact Me
           </Link>
         </div>
       </div>
@@ -103,12 +103,12 @@ export default function ComponentsHeaderHome() {
           
           {/* Label Kecil di Sudut Frame */}
           <div className="absolute top-2 left-4 text-[10px] text-zinc-600 font-bold tracking-widest uppercase">
-            ABYN_FILE.JPG
+            ABIYAN-PROFILE.JPG
           </div>
 
           <div className="relative border-2 border-black overflow-hidden mt-4 md:mb-0 pb-4">
             <Image
-              src="/abiyan.jpg"
+              src="/abiyan-profile.jpg"
               alt="Abiyan Mirza"
               width={350}
               height={350}

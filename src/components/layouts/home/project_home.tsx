@@ -29,7 +29,7 @@ export default function ComponentsProjectHome() {
   ];
 
   return (
-    <div id="project" className="bg-zinc-900 py-16 font-mono text-white relative overflow-hidden">
+    <div id="project" className="bg-zinc-900 py-20 font-mono text-white relative overflow-hidden">
       {/* Dekorasi Grid Latar Belakang */}
       <div className="absolute inset-0 bg-[linear-gradient(to_right,#27272a_1px,transparent_1px),linear-gradient(to_bottom,#27272a_1px,transparent_1px)] bg-[size:4rem_4rem] opacity-10 pointer-events-none"></div>
 
@@ -102,7 +102,7 @@ export default function ComponentsProjectHome() {
             href="/project"
             className="inline-block px-6 py-3.5 bg-emerald-400 text-black font-black uppercase border-4 border-black shadow-[6px_6px_0px_0px_#000] hover:bg-emerald-300 active:translate-x-[3px] active:translate-y-[3px] active:shadow-[3px_3px_0px_0px_#000] transition-all tracking-wide text-sm"
           >
-            Browse All Completed Projects --&gt;
+            Browse All Completed Projects
           </Link>
         </div>
 

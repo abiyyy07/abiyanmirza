@@ -13,12 +13,9 @@ export default function Afarezastudio() {
   const [isHovered, setIsHovered] = useState(false);
 
   const screenshots = [
-    "/projek/afarezastudio.png",
-    "/projek/afarezastudio/as-ss1.png",
-    "/projek/afarezastudio/as-ss2.png",
-    "/projek/afarezastudio/as-ss3.png",
-    "/projek/afarezastudio/as-ss4.png",
-    "/projek/afarezastudio/as-ss5.png",
+    "/projek/afarezastudio/AFTD1.png",
+    "/projek/afarezastudio/AFTD2.png",
+    "/projek/afarezastudio/AFTD3.png",
   ];
 
   const autoSlideInterval = 4000;

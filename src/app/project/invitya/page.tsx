@@ -13,12 +13,14 @@ export default function Invitya() {
   const [isHovered, setIsHovered] = useState(false);
 
   const screenshots = [
-    "/projek/invitya.png",
-    "/projek/invitya/in-ss1.png",
-    "/projek/invitya/in-ss2.png",
-    "/projek/invitya/in-ss3.png",
-    "/projek/invitya/in-ss4.png",
-    "/projek/invitya/in-ss5.png",
+    "/projek/invitya/INTY1.png",
+    "/projek/invitya/INTY2.png",
+    "/projek/invitya/INTY3.png",
+    "/projek/invitya/INTY4.png",
+    "/projek/invitya/INTY5.png",
+    "/projek/invitya/INTY6.png",
+    "/projek/invitya/INTY7.png",
+    "/projek/invitya/INTY8.png",
   ];
 
   const autoSlideInterval = 4000;
