@@ -9,7 +9,7 @@ export default function ComponentsProjectHome() {
       id: "rid",
       title: "RID - License Management Apps",
       desc: "A functional system built to manage and audit database records, credentials, and active licensing for the RID Department within SSRP.",
-      image: "/projek/rid.jpg",
+      image: "/projek/rid/RID1.png",
       tags: ["Web_App", "Next.js", "Tailwind", "Firebase"],
     },
     {
