@@ -13,12 +13,23 @@ export interface ProjectItem {
 
 export const projects: ProjectItem[] = [
   {
+    id: "pbi-map",
+    title: "PBI Map",
+    image: "/projek/pbimap/PBIM1.png",
+    type: "Web App",
+    tags: ["Web App", "Next JS", "Map App"],
+    description: "PBI Map is a website application designed to simplify address search in Pondok Benowo Indah, Surabaya. This application emerged as a result of the transition from manual map viewing to digital maps, where addresses are directly displayed.",
+    detailLink: "/project/pbi-map",
+    linkType: 'web',
+    externalLink: "https://map.masjidattauhid.or.id/",
+  },
+  {
     id: "blog-afareza",
     title: "Afareza Studio Blog",
     image: "/projek/blog-afareza/AFSB1.png",
     type: "Web App",
     tags: ["Web App", "Next JS", "Company Blog"],
-    description: "fareza Studio comes with a different perspective but a common goal. We present the Afareza Blog, aiming to share experiences, tutorials, tips and tricks on technology, programming, frameworks, and development progress.",
+    description: "Afareza Studio comes with a different perspective but a common goal. We present the Afareza Blog, aiming to share experiences, tutorials, tips and tricks on technology, programming, frameworks, and development progress.",
     detailLink: "/project/blog-afareza",
     linkType: 'web',
     externalLink: "https://blog.afarezastudio.com/",
